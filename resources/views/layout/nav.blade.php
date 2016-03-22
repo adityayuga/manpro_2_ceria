@@ -15,19 +15,19 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="{{ url('/') }}">Home</a>
+                    <li class="@yield('selected-home')">
+                        <a href="{{ url('/') }}" >Home</a>
                     </li>
-                    <li>
+                    <li class="@yield('selected-services')">
                         <a href="{{ url('/services') }}">Our Services</a>
                     </li>
-                    <li>
+                    <li class="@yield('selected-activities')">
                         <a href="{{ url('/activities') }}">Our Activities</a>
                     </li>
-                    <li>
+                    <li class="@yield('selected-selfhelp')">
                         <a href="{{ url('/selfhelp') }}">Self Help</a>
                     </li>
-                    <li>
+                    <li class="@yield('selected-about')">
                         <a href="{{ url('/about') }}">About Us</a>
                     </li>
                 </ul>
