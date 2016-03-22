@@ -30,6 +30,9 @@ Route::get('/activities', function () {
 Route::get('/selfhelp', function () {
     return view('page.selfhelp');
 });
+Route::get('post', function() {
+	return view('page.post');
+});
 
 /*
 |--------------------------------------------------------------------------
