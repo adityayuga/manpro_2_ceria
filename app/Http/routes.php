@@ -12,23 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('pages.index');
+    return view('page.index');
 });
 
 Route::get('/about', function () {
-    return view('pages.about');
+    return view('page.about');
 });
 
 Route::get('/services', function () {
-    return view('pages.index');
+    return view('page.services');
 });
 
 Route::get('/activities', function () {
-    return view('pages.index');
+    return view('page.activities');
 });
 
 Route::get('/selfhelp', function () {
-    return view('pages.index');
+    return view('page.selfhelp');
 });
 
 /*
