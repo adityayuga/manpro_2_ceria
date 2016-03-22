@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>Pusat Pengembangan Pribadi UKDW</title>
+    <link rel="icon" type="image/png" href="http://i1043.photobucket.com/albums/b433/patrick_ricoo/logoukdw_zps8ora7xlt.png" />
     @yield('css')
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
