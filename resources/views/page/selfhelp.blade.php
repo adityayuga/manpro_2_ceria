@@ -9,13 +9,13 @@
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            Man must explore, and this is exploration at its greatest
+                            TAHU DAN KENALI BAKATMU!
                         </h2>
                         <h3 class="post-subtitle">
-                            Problems look mighty small from 150 miles up
+                            Kemudian, apabila kita sudah menemukan dan yakin tentang bakat yang kita miliki, apa lagi yang harus dilakukan?
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
+                    <p class="post-meta">Posted on March 22, 2016</p>
                 </div>
                 <hr>
                 <div class="post-preview">
@@ -36,7 +36,7 @@
                             We predict too much for the next year and yet far too little for the next ten.
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
+                    <p class="post-meta">Posted on August 24, 2014</p>
                 </div>
                 <hr>
                 <div class="post-preview">
@@ -48,7 +48,7 @@
                             Many say exploration is part of our destiny, but it’s actually our duty to future generations.
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
+                    <p class="post-meta">Posted on July 8, 2014</p>
                 </div>
                 <hr>
                 <!-- Pager -->
