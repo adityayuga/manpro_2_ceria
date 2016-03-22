@@ -1,4 +1,4 @@
-@extends('layout.layout')
+@extends('layout.layout_auth')
 
 <!-- Main Content -->
 @section('content')
