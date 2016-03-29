@@ -1,0 +1,9 @@
+diff a/js/artikel/create_artikel.js b/js/artikel/create_artikel.js	(rejected hunks)
+@@ -7,6 +7,5 @@
+ 		focus: true
+ 	});
+ 
+-	
+ 
+ });
+\ No newline at end of file
