@@ -11,7 +11,18 @@
 
     <title>Pusat Pengembangan Pribadi UKDW</title>
     <link rel="icon" type="image/png" href="http://i1043.photobucket.com/albums/b433/patrick_ricoo/logoukdw_zps8ora7xlt.png" />
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/clean-blog.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
     
+    @yield('css')
+
+
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -20,18 +31,11 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/clean-blog.min.js"></script>
-    @yield('css')
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/clean-blog.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
+    @yield('script')
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    @yield('script')
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -54,15 +58,6 @@
     <hr>
 
     @include('layout.footer')
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
 
 </body>
 
