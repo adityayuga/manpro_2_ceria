@@ -64,4 +64,9 @@ Route::group(['middleware' => 'web'], function () {
 	Route::post('password/reset', ['as' => 'auth.password.reset', 'uses' => 'Auth\PasswordController@reset']);
 
     Route::get('/home', 'HomeController@index');
+
+
+
+    //-------Artikel-------//
+    Route::post('/artikel/post_artikel', 'ArtikelController@create_post');
 });
