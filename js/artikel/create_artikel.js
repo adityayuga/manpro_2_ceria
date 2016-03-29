@@ -19,7 +19,7 @@ $(document).ready(function(){
 	function requestUploadArtikel(judul, isi, kategori){
 		$.ajaxSetup({
 			headers: {
-				'X-CSRF-TOKEN':$('meta-[name="csrf_token"]').attr('content');
+				'X-CSRF-TOKEN':$('meta-[name="csrf_token"]').attr('content')
 			}
 		});
 
@@ -41,33 +41,32 @@ $(document).ready(function(){
 					else{
 						$('.alerts').append("<div class='alert alert-warning text-center' role='alert'><strong>"+result.error+"</strong>"+result.message+"</div>").fadeIn(200);
 					}
+				}
+			},
+
+			error:function(jqXhr){
+				if (jqXhr.status == 422) {
+					var errors = jqXhr.responseJSON;
+					console.log(errors);
+
+					errorHtml = "<div class='alert alert-warning text-center' role='alert'>";
+
+					$.each(errors, function(key, value){
+						errorHtml += value[0];
+						console.log(value[0]);					
+					});
+
+					errorHtml += "</div>";
+
+					$('.alerts').html("");
+					$('.alerts').append(errorHtml).fadeIn(200);
+				}
+				else{
+					$('alerts').html("");
+					$('alerts').append("Something Error!").fadeIn(200);
+						
+				}
 			}
-		},
-
-		error:function(jqXhr){
-			if (jqXhr.status == 422) {
-				var errors = jqXhr.responseJSON;
-				console.log(errors);
-
-				errorHtml = "<div class='alert alert-warning text-center' role='alert'>";
-
-				$.each(errors, function(key, value){
-					errorHtml += value[0];
-					console.log(value[0]);					
-				});
-
-				errorHtml += "</div>";
-
-				$('.alerts').html("");
-				$('.alerts').append(errorHtml).fadeIn(200);
-			}
-			else{
-				$('alerts').html("");
-				$('alerts').append("Something Error!").fadeIn(200);
-					
-			}
-		},
-		"json";
-	  });
+	  	},  "json");
 	}
 });
