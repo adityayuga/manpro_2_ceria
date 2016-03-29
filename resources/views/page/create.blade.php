@@ -22,7 +22,14 @@
 active
 @endsection
 
+<<<<<<< HEAD
 >>>>>>> bb6ace6270dd5300d966c2eea7edae472e6160bd
+=======
+@section('selected-create')
+active
+@endsection
+
+>>>>>>> 4817e48e5180450248e4573b59f691b53380fe72
 @section('css')
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet">
 @stop
@@ -39,32 +46,29 @@ active
         <div class="row">
             <div class="alerts"></div>
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <form name="createArticle" id="createArticle" novalidate>
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Judul Artikel</label>
-                            <input type="text" class="form-control" placeholder="Judul Artikel" id="judul" required data-validation-required-message="Harap tuliskan judul artikel.">
-                            <p class="help-block text-danger"></p>
-                        </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Judul Artikel</label>
+                        <input type="text" class="form-control" placeholder="Judul Artikel" id="judul" required data-validation-required-message="Harap tuliskan judul artikel.">
+                        <p class="help-block text-danger"></p>
                     </div>
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Isi</label>
-                            <div id="isi_artikel"></div>
-                            <p class="help-block text-danger"></p>
-                        </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Isi</label>
+                        <div id="isi_artikel"></div>
+                        <p class="help-block text-danger"></p>
                     </div>
-                    <br>
-                    <div class="row control-group">
-                		 <div class="form-group col-xs-12 controls">
-		                    <label>Jenis Artikel</label>
-		                    <form method="post" action="">
-		                		<input type="radio" name="etype" value="umum" checked="checked"> Umum
-		                		<input type="radio" name="etype" value="selfhelp"> Self Help
-		                		<input type="radio" name="etype" value="activites"> Activities
-		                    </form>
-	                    </div>
+                </div>
+                <br>
+                <div class="row control-group">
+            		 <div class="form-group col-xs-12 controls">
+	                    <label>Jenis Artikel</label>
+	                		<label><input type="radio" name="etype" value="umum" checked="checked"> Umum </label>
+	                		<label><input type="radio" name="etype" value="selfhelp"> Self Help </label>
+	                		<label><input type="radio" name="etype" value="activites"> Activities </label>
                     </div>
+<<<<<<< HEAD
                     <hr>
                     <br>
                     <div id="success"></div>
@@ -72,8 +76,17 @@ active
                         <div class="form-group col-xs-12">
                             <button type="submit" id="btnSubmit" class="btn btn-default">Send</button>
                         </div>
+=======
+                </div>
+                <hr>
+                <br>
+                <div id="success"></div>
+                <div class="row">
+                    <div class="form-group col-xs-12">
+                        <input class="btn btn-success" id="btn_submit" type="submit">
+>>>>>>> 4817e48e5180450248e4573b59f691b53380fe72
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
