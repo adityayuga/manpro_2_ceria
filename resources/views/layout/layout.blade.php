@@ -48,8 +48,14 @@
 <body>
     @include('layout.nav')
 
-    @include('layout.header')
-
+    <div class='header'>
+        @yield('header_home')
+        @yield('header_services')
+        @yield('header_activities')
+        @yield('header_selfhelp')
+        @yield('header_about')
+        @yield('header_create')
+    </div>
     <!-- Main Content -->
     <div class="container">
         @yield('content')
