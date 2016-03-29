@@ -1,4 +1,5 @@
 @extends('layout.layout')
+<<<<<<< HEAD
 @section('header_about')
     <header class="intro-header" style="background-image: url('img/about-bg.jpg')">
         <div class="container">
@@ -15,6 +16,13 @@
         </div>
     </header>
 @stop
+=======
+
+@section('selected-about')
+active
+@endsection
+
+>>>>>>> bb6ace6270dd5300d966c2eea7edae472e6160bd
 @section('css')
 <!--css here-->
 <link href="{{ asset('cssabout.css') }}" rel="stylesheet" type="text/css">

@@ -1,4 +1,5 @@
 @extends('layout.layout')
+<<<<<<< HEAD
 @section('header_create')
     <header class="intro-header" style="background-image: url('img/create-bg.jpg')">
         <div class="container">
@@ -15,6 +16,13 @@
         </div>
     </header>
 @stop
+=======
+
+@section('selected-create')
+active
+@endsection
+
+>>>>>>> bb6ace6270dd5300d966c2eea7edae472e6160bd
 @section('css')
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet">
 @stop
@@ -29,6 +37,7 @@
  <!-- Main Content -->
     <div class="container">
         <div class="row">
+            <div class="alerts"></div>
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <form name="createArticle" id="createArticle" novalidate>
                     <div class="row control-group">
@@ -61,7 +70,7 @@
                     <div id="success"></div>
                     <div class="row">
                         <div class="form-group col-xs-12">
-                            <button type="submit" class="btn btn-default">Send</button>
+                            <button type="submit" id="btnSubmit" class="btn btn-default">Send</button>
                         </div>
                     </div>
                 </form>

@@ -1,4 +1,5 @@
 @extends('layout.layout')
+<<<<<<< HEAD
 @section('header_services')
     <header class="intro-header" style="background-image: url('img/ourservice-bg.png')">
         <div class="container">
@@ -15,6 +16,13 @@
         </div>
     </header>
 @stop
+=======
+
+@section('selected-services')
+active
+@endsection
+
+>>>>>>> bb6ace6270dd5300d966c2eea7edae472e6160bd
 @section('content')
 
     <!-- Main Content -->

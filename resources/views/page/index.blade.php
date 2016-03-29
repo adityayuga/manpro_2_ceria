@@ -1,4 +1,5 @@
 @extends('layout.layout')
+<<<<<<< HEAD
 @section('header_home')
     <header class="intro-header" style="background-image: url('img/home-bg.png')">
         <div class="container">
@@ -15,6 +16,13 @@
         </div>
     </header>
 @stop
+=======
+
+@section('selected-home')
+active
+@endsection
+
+>>>>>>> bb6ace6270dd5300d966c2eea7edae472e6160bd
 @section('content')
 
     <!-- Main Content -->
@@ -24,46 +32,49 @@
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            Man must explore, and this is exploration at its greatest
+                            Judul
                         </h2>
                         <h3 class="post-subtitle">
-                            Problems look mighty small from 150 miles up
+                            content artikel
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
+                    <p class="post-meta"><!-- kategori artikel dari database-->Category Posted by on September 24, 2014</p>
                 </div>
                 <hr>
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
+                            Judul
                         </h2>
+                        <h3 class="post-subtitle">
+                            content artikel
+                        </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
+                    <p class="post-meta"><!-- kategori artikel dari database-->Category Posted by on September 24, 2014</p><a href="post.html">
                 </div>
                 <hr>
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            Science has not yet mastered prophecy
+                            Judul
                         </h2>
                         <h3 class="post-subtitle">
-                            We predict too much for the next year and yet far too little for the next ten.
+                            content artikel
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
+                    <p class="post-meta"><!-- kategori artikel dari database-->Category Posted by on August 24, 2014</p>
                 </div>
                 <hr>
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            Failure is not an option
+                            Judul
                         </h2>
                         <h3 class="post-subtitle">
-                            Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+                            content artikel
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
+                    <p class="post-meta"><!-- kategori artikel dari database-->Category Posted by on July 8, 2014</p>
                 </div>
                 <hr>
                 <!-- Pager -->
