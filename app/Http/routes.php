@@ -37,6 +37,8 @@ Route::get('/create', function() {
 	return view('page.create');
 });
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -65,8 +67,8 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('/home', 'HomeController@index');
 
+//-------Artikel-------//
+Route::post('/post_artikel', 'ArtikelController@create_post');
 
-
-    //-------Artikel-------//
-    Route::post('/artikel/post_artikel', 'ArtikelController@create_post');
+    
 });

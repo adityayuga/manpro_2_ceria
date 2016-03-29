@@ -9,19 +9,20 @@ $(document).ready(function(){
 	$('#isi_artikel').summernote('code', "hello sam er nod");
 
 
-	$('#btnSubmit').click(function(){
+	$('#btn_submit').click(function(){
 		var isiArtikel = $('#isi_artikel').summernote('code');
 		var judulArtikel = $('#judul').val();
 		var kategori = $('input[name="etype"]:checked').val();
 		requestUploadArtikel(judulArtikel, isiArtikel, kategori);
+		
 	});
 
 	function requestUploadArtikel(judul, isi, kategori){
 		$.ajaxSetup({
 			headers: {
-				'X-CSRF-TOKEN':$('meta-[name="csrf_token"]').attr('content')
+				'X-CSRF-TOKEN':$('meta[name="csrf_token"]').attr('content')
 			}
-		});
+		})
 
 		$.ajax({
 			type:'POST',
@@ -31,42 +32,40 @@ $(document).ready(function(){
 				'kategori' : kategori
 			},
 			dataType: "json",
-			url: "upload_artikel",
-			success : function(result){
-				if (result) {
+			url: "/post_artikel",
+			success: function(result){
+				if(result){
 					$('.alerts').html("");
-					if (result_error_code==0) {
-						$('.alerts').append("<div class='alert alert-success text-center' role='alert'><strong>"+result.error+"</strong>"+result.message+"</div>").fadeIn(200);	
+					if(result.error_code==0){
+						$('.alerts').append("<div class='alert alert-success text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200);
+					}else{
+						$('.alerts').append("<div class='alert alert-warning text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200);
 					}
-					else{
-						$('.alerts').append("<div class='alert alert-warning text-center' role='alert'><strong>"+result.error+"</strong>"+result.message+"</div>").fadeIn(200);
-					}
+					
 				}
 			},
+			error : function(jqXhr) {
+		        if( jqXhr.status === 422 ) {
+			        var errors = jqXhr.responseJSON; 
+			        console.log(errors);
 
-			error:function(jqXhr){
-				if (jqXhr.status == 422) {
-					var errors = jqXhr.responseJSON;
-					console.log(errors);
+			        errorsHtml = "<div class='alert alert-warning text-center' role='alert'>";
 
-					errorHtml = "<div class='alert alert-warning text-center' role='alert'>";
+			        $.each( errors , function( key, value ) {
+			            errorsHtml +=  value[0] ; 
+			            console.log(value[0]);
+			        });
 
-					$.each(errors, function(key, value){
-						errorHtml += value[0];
-						console.log(value[0]);					
-					});
-
-					errorHtml += "</div>";
-
+			        errorsHtml += "</div>";
+			  
 					$('.alerts').html("");
-					$('.alerts').append(errorHtml).fadeIn(200);
-				}
-				else{
-					$('alerts').html("");
-					$('alerts').append("Something Error!").fadeIn(200);
-						
-				}
-			}
-	  	},  "json");
+			        $('.alerts').append(errorsHtml).fadeIn(200);
+			        
+		        } else {
+		            $('.alerts').html("");
+			        $('.alerts').append("Something error!").fadeIn(200);
+		        }
+		    }
+		}, "json");
 	}
 });
