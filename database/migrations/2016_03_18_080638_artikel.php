@@ -18,9 +18,9 @@ class Artikel extends Migration
             $table->increments('id');
             $table->string('judul');
             $table->text('content');
-            $table->date('tanggal');
             $table->string('slug');
             $table->string('kategori');
+            $table->timestamps();
         });
     }
 
