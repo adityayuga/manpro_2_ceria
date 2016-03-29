@@ -1,5 +1,14 @@
 @extends('layout.layout')
 
+@section('script')
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.js"></script>
+    <script type="text/javascript" src="{{ asset('js/artikel/create_artikel.js') }}"></script>
+@stop
+@section('css')
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet">
+@stop
+
+
 @section('content')
  <!-- Main Content -->
     <div class="container">
@@ -16,7 +25,7 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Isi</label>
-                            <textarea rows="5" class="form-control" placeholder="Isi Artikel" id="isi" required data-validation-required-message="Harap tuliskan isi artikel."></textarea>
+                            <div id="isi_artikel"></div>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -30,15 +39,6 @@
 		                		<input type="radio" name="etype" value="activites"> Activities
 		                    </form>
 	                    </div>
-                    </div>
-                    <hr>
-                    <div class="row control-group">
-                         <div class="form-group col-xs-12 controls">
-                             <label>Gambar Artikel:</label>
-                             <form method="post" action="">
-                                <input type="file" name="fileToUpload" id="fileToUpload">
-                             </form>
-                         </div>
                     </div>
                     <hr>
                     <br>
