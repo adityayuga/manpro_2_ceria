@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	
 	$('#isi_artikel').summernote({
 		height: 300,
 		minHeight: 400,
@@ -6,5 +7,5 @@ $(document).ready(function(){
 		focus: true
 	});
 
-	
+
 });

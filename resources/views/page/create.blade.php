@@ -4,6 +4,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.js"></script>
     <script type="text/javascript" src="{{ asset('js/artikel/create_artikel.js') }}"></script>
 @stop
+
 @section('css')
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet">
 @stop
