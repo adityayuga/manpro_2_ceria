@@ -1,5 +1,9 @@
 @extends('layout.layout')
 
+@section('selected-home')
+active
+@endsection
+
 @section('content')
 
     <!-- Main Content -->

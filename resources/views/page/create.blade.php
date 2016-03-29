@@ -1,5 +1,9 @@
 @extends('layout.layout')
 
+@section('selected-create')
+active
+@endsection
+
 @section('css')
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet">
 @stop

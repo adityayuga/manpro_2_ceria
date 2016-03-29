@@ -1,5 +1,9 @@
 @extends('layout.layout')
 
+@section('selected-activities')
+active
+@endsection
+
 @section('content')
 
     <!-- Post Content -->

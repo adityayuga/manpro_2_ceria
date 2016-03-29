@@ -1,5 +1,9 @@
 @extends('layout.layout')
 
+@section('selected-selfhelp')
+active
+@endsection
+
 @section('content')
 
     <!-- Main Content -->
@@ -12,7 +16,8 @@
                             TAHU DAN KENALI BAKATMU!
                         </h2>
                         <h3 class="post-subtitle">
-                            Kemudian, apabila kita sudah menemukan dan yakin tentang bakat yang kita miliki, apa lagi yang harus dilakukan?
+                            Apa itu bakat?
+                            Bakat merupakan kemampuan atau keahlian khusus dalam suatu bidang yang dikuasai oleh seseorang sehingga
                         </h3>
                     </a>
                     <p class="post-meta">Posted on March 22, 2016</p>
@@ -21,34 +26,26 @@
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
+                            Mengatasi kecanduan alkohol
                         </h2>
+                        <h3 class="post-subtitle">
+                            Di sejumlah budaya tertentu alkohol menjadi minuman favorit. Banyak orang menghubungkan alkohol dengan kesenangan, relasi sosial, dan perayaan. 
+                        </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
+                    <p class="post-meta">Posted by on September 18, 2014</p>
                 </div>
                 <hr>
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            Science has not yet mastered prophecy
+                            Hidup berdamai dengan trauma
                         </h2>
                         <h3 class="post-subtitle">
-                            We predict too much for the next year and yet far too little for the next ten.
+                            Apa sih trauma itu?
+                            Kejadian yang menurut orang yang mengalaminya terasa sangat menyakitkan, tajam mengiris, dan di luar
                         </h3>
                     </a>
                     <p class="post-meta">Posted on August 24, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Failure is not an option
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted on July 8, 2014</p>
                 </div>
                 <hr>
                 <!-- Pager -->

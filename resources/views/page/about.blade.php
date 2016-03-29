@@ -1,5 +1,9 @@
 @extends('layout.layout')
 
+@section('selected-about')
+active
+@endsection
+
 @section('css')
 <!--css here-->
 <link href="{{ asset('cssabout.css') }}" rel="stylesheet" type="text/css">
