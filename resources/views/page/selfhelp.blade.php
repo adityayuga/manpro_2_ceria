@@ -13,7 +13,7 @@ active
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            TAHU DAN KENALI BAKATMU!
+                            Tahu dan Kenali Bakatmu!
                         </h2>
                         <h3 class="post-subtitle">
                             Apa itu bakat?
