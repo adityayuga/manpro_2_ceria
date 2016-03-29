@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+<<<<<<< HEAD
+class ArtikelController extends Controller
+{
+    public function create_post(Request $request){
+
+=======
 use App\Artikel;
 
 class ArtikelController extends Controller
@@ -84,5 +90,6 @@ class ArtikelController extends Controller
 		}, $html);
 
 		return $html;
+>>>>>>> 4817e48e5180450248e4573b59f691b53380fe72
     }
 }

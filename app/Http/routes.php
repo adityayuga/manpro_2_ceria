@@ -67,8 +67,15 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('/home', 'HomeController@index');
 
+<<<<<<< HEAD
+
+
+    //-------Artikel-------//
+    Route::post('/artikel/post_artikel', 'ArtikelController@create_post');
+=======
 //-------Artikel-------//
 Route::post('/post_artikel', 'ArtikelController@create_post');
 
     
+>>>>>>> 4817e48e5180450248e4573b59f691b53380fe72
 });
