@@ -16,12 +16,11 @@ class Artikel extends Migration
         Schema::create('artikel',
          function(Blueprint $table){
             $table->increments('id');
-            $table->string('judul', 30);
-            $table->string('content', 500);
+            $table->string('judul');
+            $table->text('content');
             $table->date('tanggal');
-            $table->string('penulis', 30);
-            $table->string('slug', 30);
-            $table->integer('kategori');
+            $table->string('slug');
+            $table->string('kategori');
         });
     }
 
