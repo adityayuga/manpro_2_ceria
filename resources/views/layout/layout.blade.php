@@ -11,6 +11,15 @@
 
     <title>Pusat Pengembangan Pribadi UKDW</title>
     <link rel="icon" type="image/png" href="http://i1043.photobucket.com/albums/b433/patrick_ricoo/logoukdw_zps8ora7xlt.png" />
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
     @yield('css')
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">

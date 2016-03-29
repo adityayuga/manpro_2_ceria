@@ -1592,7 +1592,6 @@ pre code {
 @media (min-width: 768px) {
   .container {
     width: 750px;
-  }
 }
 @media (min-width: 992px) {
   .container {
@@ -6260,6 +6259,8 @@ button.close {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   line-height: 1;
+  width: 100%;
+  margin: auto;
 }
 @media all and (transform-3d), (-webkit-transform-3d) {
   .carousel-inner > .item {
