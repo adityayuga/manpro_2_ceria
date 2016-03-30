@@ -6,7 +6,7 @@ $(document).ready(function(){
 		focus: true
 	});
 	
-	$('#isi_artikel').summernote('code', "hello sam er nod");
+	//$('#isi_artikel').summernote('code', "hello sam er nod");
 
 	$('#btn_submit').click(function(){
 		var isiArtikel = $('#isi_artikel').summernote('code');
@@ -36,11 +36,12 @@ $(document).ready(function(){
 				if(result){
 					$('.alerts').html("");
 					if(result.error_code==0){
-						$('.alerts').append("<div class='alert alert-success text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200);
+						$('.alerts').append("<div class='alert alert-success text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200).fadeToggle(10000).fadeOut(50);
+						$('#isi_artikel').summernote('code', '');
+						$('#judul').val("");
 					}else{
-						$('.alerts').append("<div class='alert alert-warning text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200);
+						$('.alerts').append("<div class='alert alert-warning text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200).fadeToggle(10000).fadeOut(50);
 					}
-					
 				}
 			},
 			error : function(jqXhr) {
@@ -57,7 +58,7 @@ $(document).ready(function(){
 		        errorsHtml += "</div>";
 		  
 				$('.alerts').html("");
-		        $('.alerts').append(errorsHtml).fadeIn(200);
+		        $('.alerts').append(errorsHtml).fadeIn(200).fadeToggle(10000).fadeOut(50);
 		    }
 		}, "json");
 	}
