@@ -11,31 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('page.index');
-});
 
-Route::get('/about', function () {
-    return view('page.about');
-});
-
-Route::get('/services', function () {
-    return view('page.services');
-});
-
-Route::get('/activities', function () {
-    return view('page.activities');
-});
-
-Route::get('/selfhelp', function () {
-    return view('page.selfhelp');
-});
-Route::get('/post', function() {
-	return view('page.post');
-});
-Route::get('/create', function() {
-	return view('page.create');
-});
 
 
 
@@ -50,6 +26,32 @@ Route::get('/create', function() {
 |
 */
 Route::group(['middleware' => 'web'], function () {
+	Route::get('/', function () {
+	    return view('page.index');
+	});
+
+	Route::get('/about', function () {
+	    return view('page.about');
+	});
+
+	Route::get('/services', function () {
+	    return view('page.services');
+	});
+
+	Route::get('/activities', function () {
+	    return view('page.activities');
+	});
+
+	Route::get('/selfhelp', function () {
+	    return view('page.selfhelp');
+	});
+	Route::get('/post', function() {
+		return view('page.post');
+	});
+	Route::get('/create', function() {
+		return view('page.create');
+	});
+
     //Route::auth();
 	//-------------------------------------AUTH------------------------------------//
 	Route::get('login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@showLoginForm']);
@@ -67,15 +69,8 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('/home', 'HomeController@index');
 
-<<<<<<< HEAD
-
-
-    //-------Artikel-------//
-    Route::post('/artikel/post_artikel', 'ArtikelController@create_post');
-=======
-//-------Artikel-------//
-Route::post('/post_artikel', 'ArtikelController@create_post');
+	//-------Artikel-------//
+	Route::post('/post_artikel', 'ArtikelController@create_post');
 
     
->>>>>>> 4817e48e5180450248e4573b59f691b53380fe72
 });

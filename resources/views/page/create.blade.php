@@ -1,5 +1,5 @@
 @extends('layout.layout')
-<<<<<<< HEAD
+
 @section('header_create')
     <header class="intro-header" style="background-image: url('img/create-bg.jpg')">
         <div class="container">
@@ -16,20 +16,11 @@
         </div>
     </header>
 @stop
-=======
 
 @section('selected-create')
 active
 @endsection
 
-<<<<<<< HEAD
->>>>>>> bb6ace6270dd5300d966c2eea7edae472e6160bd
-=======
-@section('selected-create')
-active
-@endsection
-
->>>>>>> 4817e48e5180450248e4573b59f691b53380fe72
 @section('css')
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet">
 @stop
@@ -68,15 +59,7 @@ active
 	                		<label><input type="radio" name="etype" value="selfhelp"> Self Help </label>
 	                		<label><input type="radio" name="etype" value="activites"> Activities </label>
                     </div>
-<<<<<<< HEAD
-                    <hr>
-                    <br>
-                    <div id="success"></div>
-                    <div class="row">
-                        <div class="form-group col-xs-12">
-                            <button type="submit" id="btnSubmit" class="btn btn-default">Send</button>
-                        </div>
-=======
+
                 </div>
                 <hr>
                 <br>
@@ -84,7 +67,7 @@ active
                 <div class="row">
                     <div class="form-group col-xs-12">
                         <input class="btn btn-success" id="btn_submit" type="submit">
->>>>>>> 4817e48e5180450248e4573b59f691b53380fe72
+
                     </div>
                 </div>
             </div>

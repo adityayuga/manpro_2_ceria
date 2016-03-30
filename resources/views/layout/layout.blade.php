@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-
+    <meta name="csrf_token" content="{{ csrf_token() }}"/>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta name="csrf_token" content="{{ csrf_token() }}"/>
+    
 
     <title>Pusat Pengembangan Pribadi UKDW</title>
     <link rel="icon" type="image/png" href="http://i1043.photobucket.com/albums/b433/patrick_ricoo/logoukdw_zps8ora7xlt.png" />
@@ -25,7 +25,7 @@
 
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="js/jquery-2.2.0.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -49,7 +49,13 @@
 <body>
     @include('layout.nav')
 
-    @include('layout.header')
+    @yield('header_about')
+    @yield('header_activities')
+    @yield('header_create')
+    @yield('header_home')
+    @yield('header_post')
+    @yield('header_selfhelp')
+    @yield('header_services')
 
     <!-- Main Content -->
     <div class="container">

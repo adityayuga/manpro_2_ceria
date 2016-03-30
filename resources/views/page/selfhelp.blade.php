@@ -1,5 +1,4 @@
 @extends('layout.layout')
-<<<<<<< HEAD
 @section('header_selfhelp')
     <header class="intro-header" style="background-image: url('img/selfhelp-bg.png')">
         <div class="container">
@@ -16,20 +15,12 @@
         </div>
     </header>
 @stop
-=======
 
 @section('selected-selfhelp')
 active
 @endsection
 
-<<<<<<< HEAD
->>>>>>> bb6ace6270dd5300d966c2eea7edae472e6160bd
-=======
-@section('selected-selfhelp')
-active
-@endsection
 
->>>>>>> 4817e48e5180450248e4573b59f691b53380fe72
 @section('content')
 
     <!-- Main Content -->
