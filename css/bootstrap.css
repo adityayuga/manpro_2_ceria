@@ -9,6 +9,16 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
+.panel-heading.note-toolbar button{
+    position:relative;
+    width:3.5em;
+    height:3em;
+}
+
+.note-btn-group .btn-group .note-fontname{
+  
+  background-color: red;
+}
 body {
   margin: 0;
 }

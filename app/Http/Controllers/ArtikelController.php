@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Artikel;
-
+use View;
+use DB;
 class ArtikelController extends Controller
 {
 	protected $rules = [
@@ -43,6 +44,37 @@ class ArtikelController extends Controller
         }
 
         return response()->json(['error_code' => $err_code, 'error' => $error, 'message' => $message]);
+    }
+
+	public function kelola_post(Request $request){
+		
+    	$err_code;
+        $error;
+        $message;		
+        $data;
+        try{
+
+            $err_code = 0;
+            $error = "sukses ora error!";
+            $message = ", anda berhasil!";
+            $data = DB::table('artikel')->get();
+        }catch(Exception $e){
+            $err_code = 0;
+            $error = "error cuk!";
+            $message = ", koe!";
+        }
+
+        return response()->json(['error_code' => $err_code, 'error' => $error, 'data' => $data, 'message' => $message]);
+
+	}
+
+    public function lihatArtikel(){
+    	$data = DB::table('artikel')->get();
+    	return View::make('page.kelola')->with('namaTag',$data);
+    }
+    public function lihatArtikel2(){
+    	$data = DB::table('artikel')->get();
+    	return View::make('page.tabel')->with('namaTag',$data);
     }
 
     private function generateImage($html){

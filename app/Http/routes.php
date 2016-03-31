@@ -51,6 +51,9 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/create', function() {
 		return view('page.create');
 	});
+	Route::get('/kelola', function() {
+		return view('page.kelola');
+	});
 
     //Route::auth();
 	//-------------------------------------AUTH------------------------------------//
@@ -71,6 +74,7 @@ Route::group(['middleware' => 'web'], function () {
 
 	//-------Artikel-------//
 	Route::post('/post_artikel', 'ArtikelController@create_post');
+	Route::get('/kelola_artikel', 'ArtikelController@kelola_post');
+    //Route::get('kelola',['as' => 'kelola', 'uses' => 'ArtikelController@lihatArtikel']);
 
-    
 });

@@ -33,6 +33,9 @@
                     <li class="@yield('selected-create')">
                         <a href="{{ url('/create') }}">Create Article</a>
                     </li>
+                    <li class="@yield('selected-kelola')">
+                        <a href="{{ url('/kelola') }}">Kelola Article</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
