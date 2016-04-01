@@ -52,12 +52,15 @@ class ArtikelController extends Controller
         $error;
         $message;		
         $data;
+        $kataKunci;
         try{
 
             $err_code = 0;
             $error = "sukses ora error!";
             $message = ", anda berhasil!";
-            $data = DB::table('artikel')->get();
+            $kataKunci = $request->kataKunci;
+            $data = Artikel::
+            			select('artikel.id', 'artikel.judul', 'artikel.created_at')->where('artikel.judul',  'like', '%'.$kataKunci.'%' )->get();
         }catch(Exception $e){
             $err_code = 0;
             $error = "error cuk!";
@@ -68,14 +71,6 @@ class ArtikelController extends Controller
 
 	}
 
-    public function lihatArtikel(){
-    	$data = DB::table('artikel')->get();
-    	return View::make('page.kelola')->with('namaTag',$data);
-    }
-    public function lihatArtikel2(){
-    	$data = DB::table('artikel')->get();
-    	return View::make('page.tabel')->with('namaTag',$data);
-    }
 
     private function generateImage($html){
     	$html = preg_replace_callback("/src=\"data:([^\"]+)\"/", function ($matches) {

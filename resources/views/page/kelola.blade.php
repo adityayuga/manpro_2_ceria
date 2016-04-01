@@ -30,13 +30,11 @@ active
     <p></p>
     <h3>Tabel Artikel</h3>
     <div >
-         <form action="" class="search-form">
             <div class="form-group has-feedback">
                 <label for="search" class="sr-only">Search</label>
-                    <input type="text" class="form-control" name="search" id="search" placeholder="Cari Judul...">
+                    <input type="text" class="form-control" name="search" id="cari" placeholder="Cari Judul...">
                     <a href="" class="glyphicon glyphicon-search form-control-feedback"></a>
             </div>
-        </form>
     </div>
     <div class="tabel_artikel">
         <div class="table-responsive">

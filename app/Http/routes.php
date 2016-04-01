@@ -74,7 +74,7 @@ Route::group(['middleware' => 'web'], function () {
 
 	//-------Artikel-------//
 	Route::post('/post_artikel', 'ArtikelController@create_post');
-	Route::get('/kelola_artikel', 'ArtikelController@kelola_post');
+	Route::post('/kelola_artikel', 'ArtikelController@kelola_post');
     //Route::get('kelola',['as' => 'kelola', 'uses' => 'ArtikelController@lihatArtikel']);
 
 });

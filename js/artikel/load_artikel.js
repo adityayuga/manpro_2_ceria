@@ -1,34 +1,33 @@
 $(document).ready(function(){
 
-	 			requestLoadArtikel();
-// 	//            jika dipilih, artikel akan masuk ke input dan modal di tutup
-// 			requestLoadArtikel();
-//             $(document).on('click', '.pilih', function (e) {
-//                 document.getElementById("artikel").value = $(this).attr('data-artikel');
-                
-//             });
+
+    		var a = $('#cari').val();
+			requestLoadArtikel(a);	
+	 		
+	 		$('#cari').keyup(function(){
+	 			a = $('#cari').val();
+	 			requestLoadArtikel(a);	
+	 			console.log(a);
+	 		});
             
+            function requestLoadArtikel(kataKunci){
 
-// //            tabel lookup mu
-//             $(function () {
-//                 $("#lookup").dataTable();
-//             });
-
-//             function dummy() {
-//                 var artikel = document.getElementById("artikel").value;
-//                 alert('Nomor Induk Mahasiswa ' + artikel + ' berhasil tersimpan');
-                
-//                 var ket = document.getElementById("ket").value;
-//                 alert('Keterangan ' + ket + ' berhasil tersimpan');
-//             }
-            function requestLoadArtikel(){
+					$.ajaxSetup({
+						headers: {
+							'X-CSRF-TOKEN':$('meta[name="csrf_token"]').attr('content')
+						}
+					})
             		$.ajax({
-						type:"GET",
+						type:"POST",
+						data:{
+							'kataKunci' : kataKunci
+						},	
 						dataType: "json",
 						url: "kelola_artikel",
 						success: function(result){
 							if(result){
 								$('.alerts').html("");
+								$('tbody').html("");
 								if(result.error_code==0){
 									var count = 0;
 									$.each( result.data, function() {
@@ -41,10 +40,10 @@ $(document).ready(function(){
 									var bulan = date.getMonth()+1;
 									var tahun = date.getFullYear();
 
+									count +=1;
 										$('tbody').append(
-										"<tr class='edan-"+count+"'><th>"+result.data[count].id+"</th> <th >"+result.data[count].judul+"</th><th >"+ weekday +" , "+ tgl + "/" + bulan+ "/" +tahun+"</th><th><a href='' class='glyphicon glyphicon-pencil'></a></th><th><a href='' class='glyphicon glyphicon-trash'></a></th></tr>"
+										"<tr class='edan-"+count+"'><td>"+count+"</td> <td>"+result.data[count-1].judul+"</td><td>"+ weekday +" , "+ tgl + "/" + bulan+ "/" +tahun+"</td><td><a href='' class='glyphicon glyphicon-pencil'></a></td><td><a href='' class='glyphicon glyphicon-trash'></a></td></tr>"
 										);
-									  count +=1;
 									});
 									
 								}else{
@@ -65,8 +64,8 @@ $(document).ready(function(){
 
 					        errorsHtml += "</div>";
 					  
-							$('.alerts').html("");
-					        $('.alerts').append(errorsHtml).fadeIn(200).fadeToggle(10000).fadeOut(50);
+							$('.tbody').html("");
+					        $('.tbody').append(errorsHtml).fadeIn(200).fadeToggle(10000).fadeOut(50);
 					    }
 					}, "json");
 		}
