@@ -46,13 +46,13 @@ $(document).ready(function(){
 			},
 			error : function(jqXhr) {
 		        var errors = jqXhr.responseJSON; 
-		        console.log(jqXhr);
+		        //console.log(jqXhr);
 
 		        errorsHtml = "<div class='alert alert-warning text-center' role='alert'>";
 
 		        $.each( errors , function( key, value ) {
 		            errorsHtml +=  value[0] ; 
-		            console.log(value[0]);
+		            //console.log(value[0]);
 		        });
 
 		        errorsHtml += "</div>";

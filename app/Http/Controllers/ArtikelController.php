@@ -12,7 +12,7 @@ use DB;
 class ArtikelController extends Controller
 {
 	protected $rules = [
-        'judul' => ['required', 'max:255'],
+        'judul' => ['required', 'max:255', 'unique:artikel,judul'],
         'isi' => ['required'],
         'kategori' => ['required'],
     ];
@@ -28,7 +28,7 @@ class ArtikelController extends Controller
             $artikel = new Artikel;
             $artikel->judul = $request->judul;
             $artikel->content = $this->generateImage($request->isi);
-            $artikel->slug = $request->judul;
+            $artikel->slug = str_replace(" ", '-', strtolower($request->judul));
             $artikel->kategori = $request->kategori;
 
             $artikel->save();
@@ -56,15 +56,15 @@ class ArtikelController extends Controller
         try{
 
             $err_code = 0;
-            $error = "sukses ora error!";
-            $message = ", anda berhasil!";
+            $error = "Sukses!";
+            $message = ", load data!";
             $kataKunci = $request->kataKunci;
             $data = Artikel::
             			select('artikel.id', 'artikel.judul', 'artikel.created_at')->where('artikel.judul',  'like', '%'.$kataKunci.'%' )->get();
         }catch(Exception $e){
             $err_code = 0;
-            $error = "error cuk!";
-            $message = ", koe!";
+            $error = "error!";
+            $message = ", artikel gagal di load!";
         }
 
         return response()->json(['error_code' => $err_code, 'error' => $error, 'data' => $data, 'message' => $message]);

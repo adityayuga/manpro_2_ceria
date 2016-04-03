@@ -1,13 +1,13 @@
 $(document).ready(function(){
 
 
-    		var a = $('#cari').val();
-			requestLoadArtikel(a);	
+    		var search = $('#cari').val();
+			requestLoadArtikel(search);	
 	 		
 	 		$('#cari').keyup(function(){
-	 			a = $('#cari').val();
-	 			requestLoadArtikel(a);	
-	 			console.log(a);
+	 			search = $('#cari').val();
+	 			requestLoadArtikel(search);	
+	 			//console.log(a);
 	 		});
             
             function requestLoadArtikel(kataKunci){
@@ -42,7 +42,7 @@ $(document).ready(function(){
 
 									count +=1;
 										$('tbody').append(
-										"<tr class='edan-"+count+"'><td>"+count+"</td> <td>"+result.data[count-1].judul+"</td><td>"+ weekday +" , "+ tgl + "/" + bulan+ "/" +tahun+"</td><td><a href='' class='glyphicon glyphicon-pencil'></a></td><td><a href='' class='glyphicon glyphicon-trash'></a></td></tr>"
+										"<tr class='"+count+"'><td>"+count+"</td> <td>"+result.data[count-1].judul+"</td><td>"+ weekday +" , "+ tgl + "/" + bulan+ "/" +tahun+"</td><td><a href='' class='glyphicon glyphicon-pencil'></a></td><td><a data-id='"+ result.data[count-1].id +"'' class='glyphicon glyphicon-trash delete-artikel'></a></td></tr>"
 										);
 									});
 									
@@ -53,13 +53,13 @@ $(document).ready(function(){
 						},
 						error : function(jqXhr) {
 					        var errors = jqXhr.responseJSON; 
-					        console.log(jqXhr);
+					        //console.log(jqXhr);
 
 					        errorsHtml = "<div class='alert alert-warning text-center' role='alert'>";
 
 					        $.each( errors , function( key, value ) {
 					            errorsHtml +=  value[0] ; 
-					            console.log(value[0]);
+					            //console.log(value[0]);
 					        });
 
 					        errorsHtml += "</div>";
