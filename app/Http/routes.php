@@ -26,9 +26,7 @@
 |
 */
 Route::group(['middleware' => 'web'], function () {
-	Route::get('/', function () {
-	    return view('page.index');
-	});
+	Route::get('/', 'ArtikelController@get_artikel_umum');
 
 	Route::get('/about', function () {
 	    return view('page.about');
@@ -38,13 +36,9 @@ Route::group(['middleware' => 'web'], function () {
 	    return view('page.services');
 	});
 
-	Route::get('/activities', function () {
-	    return view('page.activities');
-	});
+	Route::get('/activities','ArtikelController@get_artikel_activities');
 
-	Route::get('/selfhelp', function () {
-	    return view('page.selfhelp');
-	});
+	Route::get('/selfhelp','ArtikelController@get_artikel_selfhelp');
 	Route::get('/post', function() {
 		return view('page.post');
 	});
