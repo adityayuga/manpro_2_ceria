@@ -35,6 +35,7 @@ active
  <!-- Main Content -->
     <div class="container">
         <div class="row">
+        <h1 class="text-center tambahtengah">Tambah Artikel</h1>
             <div class="alerts"></div>
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="row control-group">
@@ -67,11 +68,9 @@ active
                 <div class="row">
                     <div class="form-group col-xs-12">
                         <input class="btn btn-success" id="btn_submit" type="submit">
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 @stop
