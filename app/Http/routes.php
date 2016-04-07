@@ -54,7 +54,9 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/kelola', function() {
 		return view('page.kelola');
 	});
-
+	Route::get('editArtikel-{id}', function() {
+		return view('page.edit');
+	});
     //Route::auth();
 	//-------------------------------------AUTH------------------------------------//
 	Route::get('login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@showLoginForm']);
@@ -74,7 +76,8 @@ Route::group(['middleware' => 'web'], function () {
 
 	//-------Artikel-------//
 	Route::post('/post_artikel', 'ArtikelController@create_post');
+	Route::post('/update_artikel', 'ArtikelController@update_post');
 	Route::post('/kelola_artikel', 'ArtikelController@kelola_post');
-    //Route::get('kelola',['as' => 'kelola', 'uses' => 'ArtikelController@lihatArtikel']);
+	Route::get('/edit_artikel', 'ArtikelController@edit_post');
 
 });

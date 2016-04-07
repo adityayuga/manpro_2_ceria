@@ -1,15 +1,35 @@
+
+function requestEditArtikel(id){
+				$.ajax({
+	                url: 'editArtikel-{id}',
+	                type: 'GET',
+	                data: { id: id },
+	                success: function(response)
+	                {
+	                    window.location.replace("editArtikel-"+id+"");
+						
+	                }
+	            });
+		}
+
 $(document).ready(function(){
 
-
+			
     		var search = $('#cari').val();
 			requestLoadArtikel(search);	
 	 		
 	 		$('#cari').keyup(function(){
 	 			search = $('#cari').val();
 	 			requestLoadArtikel(search);	
-	 			//console.log(a);
+	 			
 	 		});
-            
+
+			$('#btn_cancel').click(function (){
+				var kosong = "";
+				requestLoadArtikel(kosong);
+			});
+
+
             function requestLoadArtikel(kataKunci){
 
 					$.ajaxSetup({
@@ -26,7 +46,7 @@ $(document).ready(function(){
 						url: "kelola_artikel",
 						success: function(result){
 							if(result){
-								$('.alerts').html("");
+								$('.alert').html("");
 								$('tbody').html("");
 								if(result.error_code==0){
 									var count = 0;
@@ -42,12 +62,18 @@ $(document).ready(function(){
 
 									count +=1;
 										$('tbody').append(
-										"<tr class='"+count+"'><td>"+count+"</td> <td>"+result.data[count-1].judul+"</td><td>"+ weekday +" , "+ tgl + "/" + bulan+ "/" +tahun+"</td><td><a href='' class='glyphicon glyphicon-pencil'></a></td><td><a data-id='"+ result.data[count-1].id +"'' class='glyphicon glyphicon-trash delete-artikel'></a></td></tr>"
+										"<tr class='"+count+"'>"+
+										"<td>"+count+"</td> <td>"+result.data[count-1].judul+"</td>"+
+										"<td>"+ weekday +" , "+ tgl + "/" + bulan+ "/" +tahun+"</td>"+
+										"<td><a id='"+result.data[count-1].id+"'' onclick='requestEditArtikel("+result.data[count-1].id+")' class='glyphicon glyphicon-pencil'></a></td>"+
+										//"<td><a id='"+result.data[count-1].id+"'' href='kelola/"+pindahEdit(result.data[count-1].id)+"' class='glyphicon glyphicon-pencil'></a></td>"+
+										"<td><a class='glyphicon glyphicon-trash delete-artikel'></a>"+
+										"</td></tr>"
 										);
 									});
 									
 								}else{
-									$('.alerts').append("<div class='alert alert-warning text-center' role='alert'><strong>"+ result.data[0].judul +"</strong>"+ result.message +"</div>").fadeIn(200).fadeToggle(10000).fadeOut(50);
+									$('.alert').append("<div class='alert alert-warning text-center' role='alert'><strong>"+ result.data[0].judul +"</strong>"+ result.message +"</div>").fadeIn(200).fadeToggle(10000).fadeOut(50);
 								}
 							}
 						},
@@ -69,5 +95,9 @@ $(document).ready(function(){
 					    }
 					}, "json");
 		}
+
+
+
 	        
 });
+

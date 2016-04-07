@@ -25,6 +25,7 @@ class ArtikelController extends Controller
         $this->validate($request, $this->rules);
         
     	try{
+
             $artikel = new Artikel;
             $artikel->judul = $request->judul;
             $artikel->content = $this->generateImage($request->isi);
@@ -70,6 +71,66 @@ class ArtikelController extends Controller
         return response()->json(['error_code' => $err_code, 'error' => $error, 'data' => $data, 'message' => $message]);
 
 	}
+
+
+	public function edit_post(Request $request){
+		
+    	$err_code;
+        $error;
+        $message;		
+        $data;
+        $id;
+        try{
+
+            $err_code = 0;
+            $error = "Sukses!";
+            $message = ", load data!";
+            $id = $request->id;
+            $data = Artikel::
+            			select('artikel.id', 'artikel.judul', 'artikel.content', 'artikel.kategori')->where('artikel.id',  'like', '%'.$id.'%' )->get();
+
+        }catch(Exception $e){
+            $err_code = 0;
+            $error = "error!";
+            $message = ", artikel gagal di load!";
+        }
+        
+        return response()->json(['error_code' => $err_code, 'error' => $error, 'data' => $data, 'message' => $message]);
+
+	}
+
+	public function update_post(Request $request){
+    	$err_code;
+        $error;
+        $message;
+
+        $this->validate($request, $this->rules);
+        
+    	try{
+    		$artikel = new Artikel;
+
+			$artikel->exists = true;
+			$artikel->id = $request->id;
+            
+            $artikel->judul = $request->judul;
+            $artikel->content = $this->generateImage($request->isi);
+            $artikel->slug = str_replace(" ", '-', strtolower($request->judul));
+            $artikel->kategori = $request->kategori;
+            $artikel->updated_at = $request->updated_at;
+            $artikel->save();
+
+            $err_code = 0;
+            $error = "Success!";
+            $message = ", Artikel telah diEDIT!";
+
+        }catch(Exception $e){
+            $err_code = 0;
+            $error = "Warning!";
+            $message = ", Artikel gagal diupload!";
+        }
+
+        return response()->json(['error_code' => $err_code, 'error' => $error, 'message' => $message]);
+    }
 
 
     private function generateImage($html){
