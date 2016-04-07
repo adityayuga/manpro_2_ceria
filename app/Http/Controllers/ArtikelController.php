@@ -17,6 +17,20 @@ class ArtikelController extends Controller
         'kategori' => ['required'],
     ];
 
+    public function get_artikel_activities(){
+        $artikel = Artikel::where("kategori","=","Activities")->paginate(7);
+        return view('page.activities',compact('artikel'));
+    }
+
+    public function get_artikel_umum(){
+        $artikel = Artikel::where("kategori","=","Umum")->paginate(7);
+        return view('page.index',compact('artikel'));
+    }
+    public function get_artikel_selfhelp(){
+        $artikel = Artikel::where("kategori","=","Selfhelp")->paginate(7);
+        return view('page.selfhelp',compact('artikel'));
+    }
+
     public function create_post(Request $request){
     	$err_code;
         $error;

@@ -13,7 +13,6 @@ $(document).ready(function(){
 		var judulArtikel = $('#judul').val();
 		var kategori = $('input[name="etype"]:checked').val();
 		requestUploadArtikel(judulArtikel, isiArtikel, kategori);
-
 	});
 
 	function requestUploadArtikel(judul, isi, kategori){
@@ -39,8 +38,12 @@ $(document).ready(function(){
 						$('.alerts').append("<div class='alert alert-success text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200).fadeToggle(10000).fadeOut(50);
 						$('#isi_artikel').summernote('code', '');
 						$('#judul').val("");
+						$('html, body').animate({
+							scrollTop: $('.tambahtengah').offset().top
+						}, 1000);
+
 					}else{
-						$('.alerts').append("<div class='alert alert-warning text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200).fadeToggle(10000).fadeOut(50);
+						$('.alerts').append("<div class='alert alert-warning text-center alert-message' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200).fadeToggle(10000).fadeOut(50);
 					}
 				}
 			},

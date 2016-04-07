@@ -25,61 +25,29 @@ active
     <!-- Main Content -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    @foreach ($artikel as $a_artikel)
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            Judul
+                            {{$a_artikel->judul}}
                         </h2>
                         <h3 class="post-subtitle">
-                            content artikel
+                            {!!str_limit($a_artikel->content,50,"...")!!}
                         </h3>
                     </a>
-                    <p class="post-meta"><!-- kategori artikel dari database-->Category Posted by on September 24, 2014</p>
+                    <p class="post-meta"><!-- kategori artikel dari database-->Category Posted by on {{$a_artikel->created_at}}</p>
                 </div>
                 <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Judul
-                        </h2>
-                        <h3 class="post-subtitle">
-                            content artikel
-                        </h3>
-                    </a>
-                    <p class="post-meta"><!-- kategori artikel dari database-->Category Posted by on September 24, 2014</p><a href="post.html">
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Judul
-                        </h2>
-                        <h3 class="post-subtitle">
-                            content artikel
-                        </h3>
-                    </a>
-                    <p class="post-meta"><!-- kategori artikel dari database-->Category Posted by on August 24, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Judul
-                        </h2>
-                        <h3 class="post-subtitle">
-                            content artikel
-                        </h3>
-                    </a>
-                    <p class="post-meta"><!-- kategori artikel dari database-->Category Posted by on July 8, 2014</p>
-                </div>
-                <hr>
+                    @endforeach
+
+                {!! $artikel->render() !!}
                 <!-- Pager -->
-                <ul class="pager">
+                <!--<ul class="pager">
                     <li class="next">
                         <a href="#">Older Posts &rarr;</a>
                     </li>
-                </ul>
+                </ul>-->
             </div>
         </div>
     </div>
