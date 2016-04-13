@@ -71,7 +71,7 @@ $(document).ready(function(){
 							});
 
 							$('.delete-artikel').click(function(){
-								requestDeleteArtikel($(this).attr("data-id"););
+								requestDeleteArtikel($(this).attr("data-id"));
 							})
 							
 						}else{
