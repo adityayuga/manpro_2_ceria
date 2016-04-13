@@ -55,7 +55,6 @@
 	                		<label><input class="CBsh" type="radio" name="etype" value="selfhelp"> Self Help </label>
 	                		<label><input class="CBact" type="radio" name="etype" value="activites"> Activities </label>
                     </div>
-
                 </div>
                 <hr>
                 <br>
@@ -69,5 +68,4 @@
             </div>
         </div>
     </div>
-
 @stop
