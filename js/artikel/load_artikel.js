@@ -72,7 +72,8 @@ $(document).ready(function(){
 							});
 
 							$('.delete-artikel').click(function(){
-								requestDeleteArtikel($(this).attr("data-id"););
+								//console.log('delete');
+								requestDeleteArtikel($(this).attr('data-id'));
 							})
 							
 						}else{
@@ -105,29 +106,24 @@ $(document).ready(function(){
 				'X-CSRF-TOKEN':$('meta[name="csrf_token"]').attr('content')
 			}
 		})
-
 		$.ajax({
 			type: "POST",
 			data: {
 				'id' : id
 			},
 			dataType: "json",
-			url: "/delete_artikel",
+			url: "delete_artikel",
 			success: function(result){
 				if(result){
 					$('.alerts').html("");
 					if(result.error_code==0){
-						$('.alerts').append("<div class='alert alert-success text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200);
 						requestLoadArtikel($('#cari').val());
-					}else{
-						$('.alerts').append("<div class='alert alert-warning text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200);
-					}
-					
+					}					
 				}
 			},
-			error: function(){
+			error: function(result){
 				$('.alerts').html("");
-				$('.alerts').append("<div class='alert alert-warning text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200);
+				$('.alerts').append("<div class='alert alert-warning text-center' role='alert'><strong>Error!</strong> gagal hapus artikel!</div>").fadeIn(200);
 			}
 		}, "json");
 	}
