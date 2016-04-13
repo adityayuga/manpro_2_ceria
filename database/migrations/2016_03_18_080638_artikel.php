@@ -17,6 +17,8 @@ class Artikel extends Migration
          function(Blueprint $table){
             $table->increments('id');
             $table->string('judul');
+            $table->string('deskripsi');
+            $table->string('path');
             $table->text('content');
             $table->string('slug');
             $table->string('kategori');
