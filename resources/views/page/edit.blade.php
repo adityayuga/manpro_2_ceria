@@ -30,6 +30,7 @@
  <!-- Main Content -->
     <div class="container">
         <div class="row">
+        <h1 class="text-center edittengah">Edit Artikel</h1>
             <div class="alerts"></div>
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="row control-group">

@@ -25,7 +25,6 @@ $(document).ready(function(){
 						else{
 							$('.CBact').prop("checked", true);
 						}
-
 									
 					}else{
 						$('.alerts').append("<div class='alert alert-warning text-center' role='alert'><strong>"+ result.data[0].judul +"</strong>"+ result.message +"</div>").fadeIn(200).fadeToggle(10000).fadeOut(50);
@@ -81,6 +80,9 @@ $(document).ready(function(){
 						$('.alerts').append("<div class='alert alert-success text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200).fadeToggle(10000).fadeOut(50);
 						$('#isi_artikel').summernote('code', '');
 						$('#judul').val("");
+						$('html, body').animate({
+							scrollTop: $('.edittengah').offset().top
+						}, 1000);
 					}else{
 						$('.alerts').append("<div class='alert alert-warning text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200).fadeToggle(10000).fadeOut(50);
 					}
