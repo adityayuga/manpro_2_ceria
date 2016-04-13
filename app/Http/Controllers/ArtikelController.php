@@ -17,6 +17,12 @@ class ArtikelController extends Controller
         'kategori' => ['required'],
     ];
 
+    protected $rulesEdit = [
+        'judul' => ['required', 'max:255'],
+        'isi' => ['required'],
+        'kategori' => ['required'],
+    ]
+
     public function get_artikel_activities(){
         $artikel = Artikel::where("kategori","=","Activities")->paginate(7);
         return view('page.activities',compact('artikel'));
@@ -118,7 +124,7 @@ class ArtikelController extends Controller
         $error;
         $message;
 
-        $this->validate($request, $this->rules);
+        $this->validate($request, $this->rulesEdit);
         
     	try{
     		$artikel = new Artikel;
