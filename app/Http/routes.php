@@ -72,6 +72,7 @@ Route::group(['middleware' => 'web'], function () {
 	Route::post('/post_artikel', 'ArtikelController@create_post');
 	Route::post('/update_artikel', 'ArtikelController@update_post');
 	Route::post('/kelola_artikel', 'ArtikelController@kelola_post');
+	Route::post('/delete_artikel', 'ArtikelController@delete_post');
 	Route::get('/edit_artikel', 'ArtikelController@edit_post');
 
 });

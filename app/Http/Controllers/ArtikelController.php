@@ -21,7 +21,7 @@ class ArtikelController extends Controller
         'judul' => ['required', 'max:255'],
         'isi' => ['required'],
         'kategori' => ['required'],
-    ]
+    ];
 
     public function get_artikel_activities(){
         $artikel = Artikel::where("kategori","=","Activities")->paginate(7);
@@ -141,17 +141,35 @@ class ArtikelController extends Controller
 
             $err_code = 0;
             $error = "Success!";
-            $message = ", Artikel telah diEDIT!";
+            $message = ", Artikel telah diedit!";
 
         }catch(Exception $e){
             $err_code = 0;
             $error = "Warning!";
-            $message = ", Artikel gagal diupload!";
+            $message = ", Artikel gagal diedit!";
         }
 
         return response()->json(['error_code' => $err_code, 'error' => $error, 'message' => $message]);
     }
 
+    public function delete_post(Request $request){
+        try{
+
+            $artikel = Artikel::find($request->id);
+            $artikel->delete();
+
+            $err_code = 0;
+            $error = "Success!";
+            $message = ", Artikel telah dihapus!";
+
+        }catch(Exception $e){
+            $err_code = 0;
+            $error = "Warning!";
+            $message = ", Artikel gagal dihapus!";
+        }
+
+        return response()->json(['error_code' => $err_code, 'error' => $error, 'message' => $message]);
+    }
 
     private function generateImage($html){
     	$html = preg_replace_callback("/src=\"data:([^\"]+)\"/", function ($matches) {
