@@ -47,6 +47,13 @@ active
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Deskripsi Artikel</label>
+                        <textarea name="deskripsi" id="deskripsi" cols="70" rows="5" placeholder="Deskripsi Artikel"></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
                         <label>Isi</label>
                         <div id="isi_artikel"></div>
                         <p class="help-block text-danger"></p>
@@ -61,6 +68,12 @@ active
 	                		<label><input type="radio" name="etype" value="activites"> Activities </label>
                     </div>
 
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 controls">
+                        <label>Foto Artikel</label>
+                        <input name="foto" id="foto" type="file">
+                    </div>
                 </div>
                 <hr>
                 <br>

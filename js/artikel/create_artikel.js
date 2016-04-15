@@ -12,10 +12,12 @@ $(document).ready(function(){
 		var isiArtikel = $('#isi_artikel').summernote('code');
 		var judulArtikel = $('#judul').val();
 		var kategori = $('input[name="etype"]:checked').val();
-		requestUploadArtikel(judulArtikel, isiArtikel, kategori);
+		var deskripsi = $('#deskripsi'.val();)
+		requestUploadArtikel(judulArtikel, isiArtikel, kategori, deskripsi);
 	});
 
-	function requestUploadArtikel(judul, isi, kategori){
+
+	function requestUploadArtikel(judul, isi, kategori, deskripsi){
 		$.ajaxSetup({
 			headers: {
 				'X-CSRF-TOKEN':$('meta[name="csrf_token"]').attr('content')
@@ -27,7 +29,9 @@ $(document).ready(function(){
 			data: {
 				'judul' : judul,
 				'isi' : isi,
-				'kategori' : kategori
+				'kategori' : kategori,
+				'deskripsi' : deskripsi
+				
 			},
 			dataType: "json",
 			url: "post_artikel",
@@ -38,6 +42,7 @@ $(document).ready(function(){
 						$('.alerts').append("<div class='alert alert-success text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200).fadeToggle(10000).fadeOut(50);
 						$('#isi_artikel').summernote('code', '');
 						$('#judul').val("");
+						//document.getElementById("deskripsi").val()="";
 						$('html, body').animate({
 							scrollTop: $('.tambahtengah').offset().top
 						}, 1000);

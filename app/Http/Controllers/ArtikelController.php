@@ -15,6 +15,7 @@ class ArtikelController extends Controller
         'judul' => ['required', 'max:255', 'unique:artikel,judul'],
         'isi' => ['required'],
         'kategori' => ['required'],
+        'deskripsi' => ['required', 'max:255'],
     ];
 
     protected $rulesEdit = [
@@ -58,6 +59,7 @@ class ArtikelController extends Controller
             $artikel->content = $this->generateImage($request->isi);
             $artikel->slug = str_replace(" ", '-', strtolower($request->judul));
             $artikel->kategori = $request->kategori;
+            $artikel->deskripsi = $request->deskripsi;
 
             $artikel->save();
 
