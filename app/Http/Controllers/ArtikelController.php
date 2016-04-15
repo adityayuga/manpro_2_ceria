@@ -23,17 +23,23 @@ class ArtikelController extends Controller
         'kategori' => ['required'],
     ];
 
+    public function detail_artikel($slug){
+        $artikel = Artikel::where("slug","=",$slug)->get();
+         return view('page.post',compact('artikel'));
+
+    }
+
     public function get_artikel_activities(){
-        $artikel = Artikel::where("kategori","=","Activities")->paginate(7);
+        $artikel = Artikel::where("kategori","=","Activities")->orderby("created_at","desc")->paginate(7);
         return view('page.activities',compact('artikel'));
     }
 
     public function get_artikel_umum(){
-        $artikel = Artikel::where("kategori","=","Umum")->paginate(7);
+        $artikel = Artikel::where("kategori","=","Umum")->orderby("created_at","desc")->paginate(7);
         return view('page.index',compact('artikel'));
     }
     public function get_artikel_selfhelp(){
-        $artikel = Artikel::where("kategori","=","Selfhelp")->paginate(7);
+        $artikel = Artikel::where("kategori","=","Selfhelp")->orderby("created_at","desc")->paginate(7);
         return view('page.selfhelp',compact('artikel'));
     }
 
@@ -43,6 +49,7 @@ class ArtikelController extends Controller
         $message;
 
         $this->validate($request, $this->rules);
+
         
     	try{
 

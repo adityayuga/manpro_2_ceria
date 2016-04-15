@@ -39,9 +39,9 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/activities','ArtikelController@get_artikel_activities');
 
 	Route::get('/selfhelp','ArtikelController@get_artikel_selfhelp');
-	Route::get('/post', function() {
-		return view('page.post');
-	});
+
+	Route::get('/post={slug}', 'ArtikelController@detail_artikel');
+
 	Route::get('/create', function() {
 		return view('page.create');
 	});

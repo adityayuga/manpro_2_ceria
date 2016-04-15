@@ -1,5 +1,8 @@
 @extends('layout.layout')
 
+
+
+
 @section('content')
 
     <!-- Post Content -->
@@ -7,6 +10,47 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="alerts"></div>
+
+                    <?php if($artikel == null)
+                    { ?>
+                   <p>tidak ada data</p>
+
+                <?php }
+                    else
+                    { ?>
+                   @foreach($artikel as $a_artikel)
+                   <p >Posted by on {{$a_artikel->created_at}}</p>
+                   <h2 class="section-heading">{{$a_artikel->judul}}</h2>
+                   <?PHP if(!$a_artikel->path == "")
+                        {?>
+                        <center><img class="img-responsive" src="Pictures/<?=$a_artikel->path?>" alt="<?=$a_artikel->path?>" width="500" />
+                    </center></br>
+                        <?PHP }?>
+                        
+                    <?=$a_artikel->content?>
+
+                        <div id="isi_artikel"></div>
+                   <div class="form-group col-xs-12">
+                    <?PHP
+                    if($a_artikel->kategori == "Activities"){
+                        echo '<a href="'. URL::to("/activities") .'" class="btn btn-mini btn-primary">Back</a>';
+                    }
+                    elseif ($a_artikel->kategori == "Umum") {
+                        echo '<a href="'. URL::to("/") .'" class="btn btn-mini btn-primary">Back</a>';
+                    }
+                    elseif($a_artikel->kategori == "Selfhelp"){
+                        echo '<a href="'. URL::to("/selfhelp") .'" class="btn btn-mini btn-primary">Back</a>';
+                    }
+                    ?>
+                        </div>
+
+                   @endforeach
+                <?php } ?>
+
+                   <!--<p>tes</p>
+
+
                     <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
 
                     <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
@@ -41,6 +85,7 @@
                     <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
 
                     <p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
+                 -->
                 </div>
             </div>
         </div>

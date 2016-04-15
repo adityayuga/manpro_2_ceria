@@ -29,12 +29,16 @@ active
              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     @foreach ($artikel as $a_artikel)
                 <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
+                    <a  href="{{ URL::to('/post=' . $a_artikel->slug) }}" value="<?=$a_artikel->slug?>">
+                        <?PHP if(!$a_artikel->path == "")
+                        {?>
+                        <img src="Pictures/<?=$a_artikel->path?>" alt="<?=$a_artikel->path?>" width="80" />
+                        <?PHP }?>
+                         <h2 class="post-title">
                             {{$a_artikel->judul}}
                         </h2>
                         <h3 class="post-subtitle">
-                            {!!str_limit($a_artikel->content,50,"...")!!}
+                            {!!str_limit($a_artikel->deskripsi,50,"...")!!}
                         </h3>
                     </a>
                     <p class="post-meta"><!-- kategori artikel dari database-->Category Posted by on {{$a_artikel->created_at}}</p>
