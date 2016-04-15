@@ -33,14 +33,12 @@
                         <div id="isi_artikel"></div>
                    <div class="form-group col-xs-12">
                     <?PHP
-                    if($a_artikel->kategori == "Activities"){
-                        echo '<a href="'. URL::to("/activities") .'" class="btn btn-mini btn-primary">Back</a>';
-                    }
-                    elseif ($a_artikel->kategori == "Umum") {
+                    if ($a_artikel->kategori == "umum") {
                         echo '<a href="'. URL::to("/") .'" class="btn btn-mini btn-primary">Back</a>';
                     }
-                    elseif($a_artikel->kategori == "Selfhelp"){
-                        echo '<a href="'. URL::to("/selfhelp") .'" class="btn btn-mini btn-primary">Back</a>';
+                    else
+                    {
+                        echo '<a href="'. URL::to("/".$a_artikel->kategori."") .'" class="btn btn-mini btn-primary">Back</a>';
                     }
                     ?>
                         </div>
