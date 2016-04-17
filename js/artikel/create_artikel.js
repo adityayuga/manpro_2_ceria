@@ -12,7 +12,7 @@ $(document).ready(function(){
 		var isiArtikel = $('#isi_artikel').summernote('code');
 		var judulArtikel = $('#judul').val();
 		var kategori = $('input[name="etype"]:checked').val();
-		var deskripsi = $('#deskripsi'.val();)
+		var deskripsi = $('#deskripsi').val();
 		requestUploadArtikel(judulArtikel, isiArtikel, kategori, deskripsi);
 	});
 
