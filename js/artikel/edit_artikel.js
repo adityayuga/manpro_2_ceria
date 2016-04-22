@@ -15,6 +15,7 @@ $(document).ready(function(){
 							focus: true
 						});
 						$('#isi_artikel').summernote('code', result.data[0].content);
+						$('#deskripsi').val(result.data[0].deskripsi);
 						$('#judul').val(result.data[0].judul);
 						if (result.data[0].kategori == "umum") {
 							$('.CBumum').prop("checked", true);
@@ -52,11 +53,12 @@ $(document).ready(function(){
 	$('#btn_submit').click(function(){
 		var isiArtikel = $('#isi_artikel').summernote('code');
 		var judulArtikel = $('#judul').val();
+		var deskripsiArtikel  = $('#deskripsi').val();
 		var kategori = $('input[name="etype"]:checked').val();
-		requestUploadArtikel(judulArtikel, isiArtikel, kategori);
+		requestUploadArtikel(judulArtikel, deskripsiArtikel, isiArtikel, kategori);
 	});
 
-	function requestUploadArtikel(judul, isi, kategori){
+	function requestUploadArtikel(judul, deskripsi, isi, kategori){
 		$.ajaxSetup({
 			headers: {
 				'X-CSRF-TOKEN':$('meta[name="csrf_token"]').attr('content')
@@ -68,6 +70,7 @@ $(document).ready(function(){
 			data: {
 				'id' : id,
 				'judul' : judul,
+				'deskripsi' : deskripsi,
 				'isi' : isi,
 				'kategori' : kategori
 			},

@@ -116,7 +116,7 @@ class ArtikelController extends Controller
             $message = ", load data!";
             $id = $request->id;
             $data = Artikel::
-            			select('artikel.id', 'artikel.judul', 'artikel.content', 'artikel.kategori')->where('artikel.id',  'like', '%'.$id.'%' )->get();
+            			select('artikel.id','artikel.deskripsi', 'artikel.judul', 'artikel.content', 'artikel.kategori')->where('artikel.id',  'like', '%'.$id.'%' )->get();
 
         }catch(Exception $e){
             $err_code = 0;
@@ -142,6 +142,7 @@ class ArtikelController extends Controller
 			$artikel->id = $request->id;
             
             $artikel->judul = $request->judul;
+            $artikel->deskripsi = $request->deskripsi;
             $artikel->content = $this->generateImage($request->isi);
             $artikel->slug = str_replace(" ", '-', strtolower($request->judul));
             $artikel->kategori = $request->kategori;
