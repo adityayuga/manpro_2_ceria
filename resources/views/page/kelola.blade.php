@@ -26,7 +26,11 @@ active
 
     <!-- Main Content -->
 
-    <div class="alerts" ></div>
+    <div class="alerts">
+        @if(session('artikel'))
+            {{session('artikel')['message']}}
+        @endif
+    </div>
     <p></p>
     <h3>Tabel Artikel</h3>
     <div >

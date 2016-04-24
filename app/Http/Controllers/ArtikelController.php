@@ -16,12 +16,15 @@ class ArtikelController extends Controller
         'isi' => ['required'],
         'kategori' => ['required'],
         'deskripsi' => ['required', 'max:255'],
+        'image' => ['required'],
     ];
 
     protected $rulesEdit = [
         'judul' => ['required', 'max:255'],
         'isi' => ['required'],
         'kategori' => ['required'],
+        'deskripsi' => ['required', 'max:255'],
+        'image' => ['required'],
     ];
 
     public function detail_artikel($slug){
@@ -53,14 +56,13 @@ class ArtikelController extends Controller
 
         
     	try{
-
             $artikel = new Artikel;
             $artikel->judul = $request->judul;
             $artikel->content = $this->generateImage($request->isi);
             $artikel->slug = str_replace(" ", '-', strtolower($request->judul));
             $artikel->kategori = $request->kategori;
             $artikel->deskripsi = $request->deskripsi;
-
+            $artikel->path = $this->saveImage($request->image);
             $artikel->save();
 
             $err_code = 0;
@@ -219,4 +221,43 @@ class ArtikelController extends Controller
 
 		return $html;
     }
+
+    private function saveImage($data){
+
+        list($type, $encContent) = explode(';', $data);
+        list($str, $contentType) = explode(':', $type);
+        if (substr($encContent, 0, 6) != 'base64') {
+            return -1; // Don't understand, return as is
+        }
+        $imgBase64 = substr($encContent, 6);
+        $imgFilename = md5($imgBase64); // Get unique filename
+        //$imgFilename = $title . "_image_" . date();
+        $imgExt = '';
+        switch($contentType) {
+            case 'image/jpeg':  $imgExt = 'jpg'; break;
+            case 'image/gif':   $imgExt = 'gif'; break;
+            case 'image/png':   $imgExt = 'png'; break;
+            default:            return $matches[0]; // Don't understand, return as is
+        }
+
+        $dir = "images/";
+        
+        if (!is_dir($dir)) {
+            mkdir($dir, 0777, true);
+        }
+
+        $imgPath = $dir.$imgFilename.'.'.$imgExt;
+        // Save the file to disk if it doesn't exist
+        if (!file_exists($imgPath)) {
+            $imgDecoded = base64_decode($imgBase64);
+            $fp = fopen($imgPath, 'w');
+            if (!$fp) {
+                return $matches[0];
+            }
+            fwrite($fp, $imgDecoded);
+            fclose($fp);
+        }
+        return $imgPath;
+    }
 }
+

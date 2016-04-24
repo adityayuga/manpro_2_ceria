@@ -45,6 +45,14 @@ active
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
+                <br>
+                
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 controls">
+                        <label for="inputpicture">Foto Artikel</label>
+                        <input type="file" name="picture" class="" id="inputpicture">
+                    </div>
+                </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
                         <label>Deskripsi Artikel</label>
@@ -69,18 +77,10 @@ active
                     </div>
 
                 </div>
-                <div class="row control-group">
-                    <div class="form-group col-xs-12 controls">
-                        <label>Foto Artikel</label>
-                        <input name="foto" id="foto" type="file">
-                    </div>
-                </div>
-                <hr>
-                <br>
                 <div id="success"></div>
                 <div class="row">
                     <div class="form-group col-xs-12">
-                        <input class="btn btn-success" id="btn_submit" type="submit">
+                        <span class="btn btn-success" id="btn_submit">Submit</span>
                     </div>
                 </div>
             </div>

@@ -1,8 +1,5 @@
 @extends('layout.layout')
 
-
-
-
 @section('content')
 
     <!-- Post Content -->
@@ -24,7 +21,7 @@
                    <h2 class="section-heading">{{$a_artikel->judul}}</h2>
                    <?PHP if(!$a_artikel->path == "")
                         {?>
-                        <center><img class="img-responsive" src="Pictures/<?=$a_artikel->path?>" alt="<?=$a_artikel->path?>" width="500" />
+                        <center><img class="img-responsive" src="<?=$a_artikel->path?>" alt="<?=$a_artikel->path?>" width="500" />
                     </center></br>
                         <?PHP }?>
                         
