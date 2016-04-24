@@ -44,7 +44,6 @@ $(document).ready(function(){
 				url: "kelola_artikel",
 				success: function(result){
 					if(result){
-						$('.alert').html("");
 						$('tbody').html("");
 						if(result.error_code==0){
 							var count = 0;
@@ -111,7 +110,7 @@ $(document).ready(function(){
 				'id' : id
 			},
 			dataType: "json",
-			url: "/delete_artikel",
+			url: "delete_artikel",
 			success: function(result){
 				if(result){
 					$('.alerts').html("");
@@ -124,15 +123,12 @@ $(document).ready(function(){
 					
 				}
 			},
-			error: function(){
+			error: function(result){
 				$('.alerts').html("");
-				$('.alerts').append("<div class='alert alert-warning text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200);
+				//$('.alerts').append("<div class='alert alert-warning text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200);
 			}
 		}, "json");
 	}
-
-
-
 	        
 });
 

@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Artikel;
 use View;
+use File;
 use DB;
 class ArtikelController extends Controller
 {
@@ -165,9 +166,11 @@ class ArtikelController extends Controller
     }
 
     public function delete_post(Request $request){
+        //return redirect('/');
         try{
-
             $artikel = Artikel::find($request->id);
+            File::delete($artikel->path);
+
             $artikel->delete();
 
             $err_code = 0;
