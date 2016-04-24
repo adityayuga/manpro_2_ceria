@@ -10,6 +10,8 @@ use App\Artikel;
 use View;
 use File;
 use DB;
+use Session;
+
 class ArtikelController extends Controller
 {
 	protected $rules = [
@@ -17,7 +19,6 @@ class ArtikelController extends Controller
         'isi' => ['required'],
         'kategori' => ['required'],
         'deskripsi' => ['required', 'max:255'],
-        'image' => ['required'],
     ];
 
     protected $rulesEdit = [
@@ -25,7 +26,6 @@ class ArtikelController extends Controller
         'isi' => ['required'],
         'kategori' => ['required'],
         'deskripsi' => ['required', 'max:255'],
-        'image' => ['required'],
     ];
 
     public function detail_artikel($artikel, $slug){
@@ -63,7 +63,13 @@ class ArtikelController extends Controller
             $artikel->slug = str_replace(" ", '-', strtolower($request->judul));
             $artikel->kategori = $request->kategori;
             $artikel->deskripsi = $request->deskripsi;
-            $artikel->path = $this->saveImage($request->image);
+            
+            if($request->image != ""){
+                File::delete($artikel->path);
+                $artikel->path = $this->saveImage($request->image);
+            }else{
+                $artikel->path = "";
+            }
             $artikel->save();
 
             $err_code = 0;
@@ -139,22 +145,26 @@ class ArtikelController extends Controller
         $this->validate($request, $this->rulesEdit);
         
     	try{
-    		$artikel = new Artikel;
-
-			$artikel->exists = true;
-			$artikel->id = $request->id;
-            
+    		$artikel = Artikel::find($request->id);
             $artikel->judul = $request->judul;
             $artikel->deskripsi = $request->deskripsi;
+            if($request->image != ""){
+                File::delete($artikel->path);
+                $artikel->path = $this->saveImage($request->image);
+            }
             $artikel->content = $this->generateImage($request->isi);
             $artikel->slug = str_replace(" ", '-', strtolower($request->judul));
             $artikel->kategori = $request->kategori;
             $artikel->updated_at = $request->updated_at;
             $artikel->save();
 
-            $err_code = 0;
+            Session::flash('artikel', ['error_code' => 0, 'header_message' => 'Success!', 'message' => 'Edit berhasil dilakukan!']);
+
+            //return redirect()->action('ArtikelController@kelola_post');
+
+            $err_code = 1;
             $error = "Success!";
-            $message = ", Artikel telah diedit!";
+            $message = ", Artikel berhasil diedit!";
 
         }catch(Exception $e){
             $err_code = 0;

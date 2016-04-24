@@ -28,7 +28,7 @@ active
 
     <div class="alerts">
         @if(session('artikel'))
-            {{session('artikel')['message']}}
+        <div class='alert alert-success text-center' role='alert'>{{session('artikel')['message']}}</div>
         @endif
     </div>
     <p></p>

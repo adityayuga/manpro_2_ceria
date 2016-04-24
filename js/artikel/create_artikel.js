@@ -15,11 +15,16 @@ $(document).ready(function(){
 		var judulArtikel = $('#judul').val();
 		var kategori = $('input[name="etype"]:checked').val();
 		var deskripsi = $('#deskripsi').val();
-		var ajax = function(imageData){
-			requestUploadArtikel(judulArtikel, isiArtikel, kategori, deskripsi, imageData);
-		}
+		if($('#inputpicture').val() == ""){
+			requestUploadArtikel(judulArtikel, isiArtikel, kategori, deskripsi, null);
+		}else{
+			var ajax = function(imageData){
+				requestUploadArtikel(judulArtikel, isiArtikel, kategori, deskripsi, imageData);
+			}
 
-		imageupload($('#inputpicture').get(0), ajax);
+			imageupload($('#inputpicture').get(0), ajax);
+		}
+		
 		//requestUploadArtikel(judulArtikel, isiArtikel, kategori, deskripsi);
 	});
 

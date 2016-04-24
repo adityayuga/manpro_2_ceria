@@ -41,6 +41,12 @@
                     </div>
                 </div>
                 <div class="row control-group">
+                    <div class="form-group col-xs-12 controls">
+                        <label for="inputpicture">Ganti Foto Artikel</label>
+                        <input type="file" name="picture" class="" id="inputpicture">
+                    </div>
+                </div>
+                <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
                         <label>Deskripsi Artikel</label>
                         <textarea name="deskripsi" id="deskripsi" cols="70" rows="5" placeholder="Deskripsi Artikel"></textarea>
@@ -63,12 +69,7 @@
 	                		<label><input class="CBact" type="radio" name="etype" value="activites"> Activities </label>
                     </div>
                 </div>
-                <div class="row control-group">
-                    <div class="form-group col-xs-12 controls">
-                        <label>Foto Artikel</label>
-                        <input name="foto" id="foto" type="file">
-                    </div>
-                </div>
+                
                 <hr>
                 <br>
                 <div id="success"></div>
