@@ -73,7 +73,7 @@ active
 	                    <label>Jenis Artikel</label>
 	                		<label><input type="radio" name="etype" value="umum" checked="checked"> Umum </label>
 	                		<label><input type="radio" name="etype" value="selfhelp"> Self Help </label>
-	                		<label><input type="radio" name="etype" value="activites"> Activities </label>
+	                		<label><input type="radio" name="etype" value="activities"> Activities </label>
                     </div>
 
                 </div>

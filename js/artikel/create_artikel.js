@@ -51,10 +51,14 @@ $(document).ready(function(){
 				if(result){
 					$('.alerts').html("");
 					if(result.error_code==0){
-						$('.alerts').append("<div class='alert alert-success text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200).fadeToggle(10000).fadeOut(50);
+
 						$('#isi_artikel').summernote('code', '');
 						$('#judul').val("");
-						//document.getElementById("deskripsi").val()="";
+						var inputFile = $('input[name="etype"]:checked');
+						inputFile.replaceWith(inputFile.val('').clone(true));;
+						$('#deskripsi').val("");
+						$('#judul').val("");
+						$('.alerts').append("<div class='alert alert-success text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200).fadeToggle(10000).fadeOut(50);
 						$('html, body').animate({
 							scrollTop: $('.tambahtengah').offset().top
 						}, 1000);

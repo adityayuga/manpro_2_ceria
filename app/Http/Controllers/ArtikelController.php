@@ -28,7 +28,7 @@ class ArtikelController extends Controller
         'image' => ['required'],
     ];
 
-    public function detail_artikel($slug){
+    public function detail_artikel($artikel, $slug){
         $artikel = Artikel::where("slug","=",$slug)->get();
          return view('page.post',compact('artikel'));
 
