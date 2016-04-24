@@ -31,7 +31,7 @@ active
 
                     @foreach ($artikel as $a_artikel)
                 <div class="post-preview">
-                    <a  href="{{ URL::to('/artikel/' . $a_artikel->slug) }}" value="<?=$a_artikel->slug?>">
+                    <a  href="{{ URL::to('/activity/' . $a_artikel->slug) }}" value="<?=$a_artikel->slug?>">
                         <?PHP if(!$a_artikel->path == "")
                         {?>
                         <img src="<?=$a_artikel->path?>" alt="<?=$a_artikel->path?>" width="80" />
