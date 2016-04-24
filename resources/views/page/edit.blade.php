@@ -42,6 +42,13 @@
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Deskripsi Artikel</label>
+                        <textarea name="deskripsi" id="deskripsi" cols="70" rows="5" placeholder="Deskripsi Artikel"></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
                         <label>Isi</label>
                         <div id="isi_artikel"></div>
                         <p class="help-block text-danger"></p>
@@ -54,6 +61,12 @@
 	                		<label><input class="CBumum" type="radio" name="etype" value="umum" > Umum </label>
 	                		<label><input class="CBsh" type="radio" name="etype" value="selfhelp"> Self Help </label>
 	                		<label><input class="CBact" type="radio" name="etype" value="activites"> Activities </label>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 controls">
+                        <label>Foto Artikel</label>
+                        <input name="foto" id="foto" type="file">
                     </div>
                 </div>
                 <hr>
