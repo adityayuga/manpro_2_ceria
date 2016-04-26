@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">PUSAT PENGEMBANGAN PRIBADI</a>
+                <a class="navbar-brand" href="{{ url('/') }}">PUSAT PENGEMBANGAN PRIBADI</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
