@@ -37,7 +37,7 @@ active
                             <?PHP if(!$a_artikel->path == "")
                             {?>
                             <td width="30%" align="left">
-                                <img src="<?=$a_artikel->path?>" alt="<?=$a_artikel->path?>" height="150" />
+                                <img src="<?=$a_artikel->path?>" alt="<?=$a_artikel->path?>" height="140" />
                             </td>
                             <?PHP }?>
                             <td align="left">
