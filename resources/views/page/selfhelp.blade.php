@@ -48,7 +48,7 @@ active
                         </tr>
                         </table>
                     </a>
-                    <p class="post-meta"><!-- kategori artikel dari database-->Category Posted by on {{$a_artikel->created_at}}</p>
+                    <p class="post-meta"><!-- kategori artikel dari database-->Category Posted on {{$a_artikel->created_at}}</p>
                 </div>
                 <hr>
                     @endforeach
