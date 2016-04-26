@@ -17,8 +17,8 @@
                     else
                     { ?>
                    @foreach($artikel as $a_artikel)
-                   <p >Posted by on {{$a_artikel->created_at}}</p>
                    <h2 class="section-heading">{{$a_artikel->judul}}</h2>
+                   <p >Posted by on {{$a_artikel->created_at}}</p>
                    <?PHP if(!$a_artikel->path == "")
                         {?>
                         <center><img class="img-responsive" src="{{asset($a_artikel->path)}}" alt="<?=$a_artikel->path?>" width="500" />
@@ -29,6 +29,7 @@
 
                         <div id="isi_artikel"></div>
                    <div class="form-group col-xs-12">
+                    <br>
                     <?PHP
                     if ($a_artikel->kategori == "umum") {
                         echo '<a href="'. URL::to("/") .'" class="btn btn-mini btn-primary">Back</a>';

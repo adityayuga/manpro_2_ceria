@@ -30,16 +30,23 @@ active
                     @foreach ($artikel as $a_artikel)
                 <div class="post-preview">
                     <a  href="{{ URL::to('/selfhelp/' . $a_artikel->slug) }}" value="<?=$a_artikel->slug?>">
-                        <?PHP if(!$a_artikel->path == "")
-                        {?>
-                        <img src="<?=$a_artikel->path?>" alt="<?=$a_artikel->path?>" width="80" />
-                        <?PHP }?>
-                         <h2 class="post-title">
+                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <?PHP if(!$a_artikel->path == "")
+                            {?>
+                            <td width="30%" align="left">
+                                <img src="<?=$a_artikel->path?>" alt="<?=$a_artikel->path?>" height="150" />
+                            </td>
+                            <?PHP }?>
+                            <td align="left">
+                                <h2 class="post-title">
                             {{$a_artikel->judul}}
-                        </h2>
-                        <h3 class="post-subtitle">
-                            {!!str_limit($a_artikel->deskripsi,50,"...")!!}
-                        </h3>
+                                </h2>
+                            <h3 class="post-subtitle">
+                            {!!str_limit($a_artikel->deskripsi,60,"...")!!}
+                            </h3></td>
+                        </tr>
+                        </table>
                     </a>
                     <p class="post-meta"><!-- kategori artikel dari database-->Category Posted by on {{$a_artikel->created_at}}</p>
                 </div>
