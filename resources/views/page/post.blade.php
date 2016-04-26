@@ -18,7 +18,7 @@
                     { ?>
                    @foreach($artikel as $a_artikel)
                    <h2 class="section-heading">{{$a_artikel->judul}}</h2>
-                   <p >Posted by on {{$a_artikel->created_at}}</p>
+                   <p >Posted on {{$a_artikel->created_at}}</p>
                    <?PHP if(!$a_artikel->path == "")
                         {?>
                         <center><img class="img-responsive" src="{{asset($a_artikel->path)}}" alt="<?=$a_artikel->path?>" width="500" />
