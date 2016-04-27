@@ -31,7 +31,6 @@ class ArtikelController extends Controller
     public function detail_artikel($artikel, $slug){
         $artikel = Artikel::where("slug","=",$slug)->get();
          return view('page.post',compact('artikel'));
-
     }
 
     public function get_artikel_activities(){
@@ -48,6 +47,11 @@ class ArtikelController extends Controller
         return view('page.selfhelp',compact('artikel'));
     }
 
+    public function artikel_to_edit($id){
+        $artikel = Artikel::where("id","=",$id)->get();
+         return view('page.edit',compact('artikel'));
+
+    }
     public function create_post(Request $request){
     	$err_code;
         $error;
@@ -92,14 +96,18 @@ class ArtikelController extends Controller
         $message;		
         $data;
         $kataKunci;
-        try{
 
+        try{
             $err_code = 0;
             $error = "Sukses!";
             $message = ", load data!";
             $kataKunci = $request->kataKunci;
-            $data = Artikel::
-            			select('artikel.id', 'artikel.judul', 'artikel.created_at')->where('artikel.judul',  'like', '%'.$kataKunci.'%' )->get();
+            $data = Artikel::select(
+                            'artikel.id', 
+                            'artikel.judul',
+                            'artikel.slug', 
+                            'artikel.created_at'
+                            )->where('artikel.judul',  'like', '%'.$kataKunci.'%' )->get();
         }catch(Exception $e){
             $err_code = 0;
             $error = "error!";
@@ -119,14 +127,16 @@ class ArtikelController extends Controller
         $data;
         $id;
         try{
-
             $err_code = 0;
             $error = "Sukses!";
             $message = ", load data!";
             $id = $request->id;
-            $data = Artikel::
-            			select('artikel.id','artikel.deskripsi', 'artikel.judul', 'artikel.content', 'artikel.kategori')->where('artikel.id',  'like', '%'.$id.'%' )->get();
-
+            $data = Artikel::select(
+                                    'artikel.id',
+                                    'artikel.deskripsi', 
+                                    'artikel.judul', 
+                                    'artikel.content', 
+                                    'artikel.kategori')->where('artikel.id',  'like', '%'.$id.'%' )->get();
         }catch(Exception $e){
             $err_code = 0;
             $error = "error!";

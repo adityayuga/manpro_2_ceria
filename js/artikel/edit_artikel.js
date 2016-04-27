@@ -1,74 +1,35 @@
 $(document).ready(function(){
-	var id = window.location.href.slice(window.location.href.indexOf('-') + 1);
-	     $.ajax({
-			type:"GET",
-			data:{ 'id' : id},	
-			dataType: "json",
-			url: "edit_artikel",
-			success: function(result){
-				if(result){
-					if(result.error_code==0){
-						$('#isi_artikel').summernote({
-							height: 300,
-							minHeight: 400,
-							maxHeight: 400,
-							focus: true
-						});
-						$('#isi_artikel').summernote('code', result.data[0].content);
-						$('#deskripsi').val(result.data[0].deskripsi);
-						$('#judul').val(result.data[0].judul);
-						$('#judul').val(result.data[0].judul);
-						if (result.data[0].kategori == "umum") {
-							$('.CBumum').prop("checked", true);
-						}
-						else if(result.data[0].kategori == "selfhelp"){
-							$('.CBsh').prop("checked", true);
-						}
-						else{
-							$('.CBact').prop("checked", true);
-						}
-						$('#btn_submit').click(function(e){
-							e.preventDefault();
+	var id = window.location.href.slice(window.location.href.indexOf('dit/') + 4);
+	$('#isi_artikel').summernote({
+		height: 300,
+		minHeight: 400,
+		maxHeight: 400,
+		focus: true
+	});
 
-							var isiArtikel = $('#isi_artikel').summernote('code');
-							var judulArtikel = $('#judul').val();
-							var deskripsiArtikel  = $('#deskripsi').val();
-							var kategori = $('input[name="etype"]:checked').val();
-							if($('#inputpicture').val() == ""){
-								requestUploadArtikel(judulArtikel, isiArtikel, kategori, deskripsiArtikel, null);
-							}else{
-								var ajax = function(imageData){
-									requestUploadArtikel(judulArtikel, isiArtikel, kategori, deskripsiArtikel, imageData);
-								}
 
-								imageupload($('#inputpicture').get(0), ajax);
-							}
+	$('#btn_submit').click(function(e){
+		e.preventDefault();
+
+		var isiArtikel = $('#isi_artikel').summernote('code');
+		var judulArtikel = $('#judul').val();
+		var deskripsiArtikel  = $('#deskripsi').val();
+		var kategori = $('input[name="etype"]:checked').val();
+
+		if($('#inputpicture').val() == ""){
+			
+			requestUploadArtikel(judulArtikel, isiArtikel, kategori, deskripsiArtikel, null);
+		}
+		else{
+			var ajax = function(imageData){
+				requestUploadArtikel(judulArtikel, isiArtikel, kategori, deskripsiArtikel, imageData);
+			}
+
+			imageupload($('#inputpicture').get(0), ajax);
+		}
+		
 							
-							
-						});
-									
-					}else{
-						$('.alerts').append("<div class='alert alert-warning text-center' role='alert'><strong>"+ result.data[0].judul +"</strong>"+ result.message +"</div>").fadeIn(200).fadeToggle(10000).fadeOut(50);
-						}
-					}
-				},
-			error : function(jqXhr) {
-				var errors = jqXhr.responseJSON; 
-					        //console.log(jqXhr);
-
-				errorsHtml = "<div class='alert alert-warning text-center' role='alert'>";
-
-					        $.each( errors , function( key, value ) {
-					            errorsHtml +=  value[0] ; 
-					            //console.log(value[0]);
-					        });
-
-					        errorsHtml += "</div>";
-					  
-							$('.tbody').html("");
-					        $('.tbody').append(errorsHtml).fadeIn(200).fadeToggle(10000).fadeOut(50);
-					    }
-					}, "json");
+	});
 
 	function requestUploadArtikel(judul, isi, kategori, deskripsi, imageData){
 		$.ajaxSetup({
@@ -88,10 +49,10 @@ $(document).ready(function(){
 				'image'		: imageData
 			},
 			dataType: "json",
-			url: "update_artikel",
+			url: window.location + "/update_artikel",
 			success: function(result){
 				if(result){
-					window.location.href = "kelola";
+					window.location.href = "../../kelola";
 				}
 			},
 			error : function(jqXhr) {
@@ -107,7 +68,7 @@ $(document).ready(function(){
 
 		        errorsHtml += "</div>";
 		  
-				$('.alerts').html("");
+				$('.alerts').html("<div>gila lu</div>");
 		        $('.alerts').append(errorsHtml).fadeIn(200).fadeToggle(10000).fadeOut(50);
 		    }
 		}, "json");
