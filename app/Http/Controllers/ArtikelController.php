@@ -39,7 +39,7 @@ class ArtikelController extends Controller
     }
 
     public function get_artikel_umum(){
-        $artikel = Artikel::where("kategori","=","Umum")->orderby("created_at","desc")->paginate(7);
+        $artikel = Artikel::orderby("created_at","desc")->paginate(7);
         return view('page.index',compact('artikel'));
     }
     public function get_artikel_selfhelp(){

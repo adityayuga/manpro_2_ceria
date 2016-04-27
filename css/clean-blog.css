@@ -10,7 +10,7 @@ body {
 }
 p {
   line-height: 1.5;
-  margin: 30px 0;
+  margin: 0px;
 }
 p a {
   text-decoration: underline;
@@ -233,7 +233,7 @@ hr.small {
   color: #808080;
   font-size: 18px;
   font-style: italic;
-  margin-top: 0;
+  margin-top: 10px;
 }
 .post-preview > .post-meta > a {
   text-decoration: none;

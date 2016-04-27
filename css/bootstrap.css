@@ -1156,8 +1156,8 @@ img {
   border-radius: 50%;
 }
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border: 0;
   border-top: 1px solid #eee;
 }
@@ -1623,6 +1623,7 @@ pre code {
 .row {
   margin-right: -15px;
   margin-left: -15px;
+  /*border-bottom: 1px solid #eeeeee;*/
 }
 .rowCreate{
   background-color: #EEDEDF;
@@ -2524,8 +2525,9 @@ label {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
+  margin-top: 15px;
   /*font-weight: bold;*/
-  color: #909090;
+  color: #404040;
 }
 input[type="search"] {
   -webkit-box-sizing: border-box;

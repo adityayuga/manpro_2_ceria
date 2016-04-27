@@ -34,8 +34,8 @@ active
                         <tr>
                             <?PHP if(!$a_artikel->path == "")
                             {?>
-                            <td width="30%" align="left">
-                                <img src="<?=$a_artikel->path?>" alt="<?=$a_artikel->path?>" height="140" />
+                            <td width="20%" align="center">
+                                <img src="<?=$a_artikel->path?>" alt="<?=$a_artikel->path?>" height="200" width="300" />
                             </td>
                             <?PHP }?>
                             <td align="left">
@@ -50,7 +50,7 @@ active
 
                                                  
                     </a>
-                    <p class="post-meta"><!-- kategori artikel dari database-->Category Posted on {{$a_artikel->created_at}}</p>
+                    <p class="post-meta"><!-- kategori artikel dari database-->Category: {{ucfirst($a_artikel->kategori)}}  Posted on {{$a_artikel->created_at}}</p>
                 </div>
                 <hr>
                     @endforeach

@@ -48,9 +48,7 @@ active
                         <th style="border:groove;">No</th>
                         <th style="border:groove;">Judul Artikel</th>
                         <th style="border:groove;">Tanggal</th>
-                        <th colspan="2" style="border:groove;text-align: center;">Kelola</th>
-                        
-                        
+                        <th colspan="2" style="border:groove;text-align: center;">Kelola</th>   
                     </tr>
                 </thead>
                 <tbody>

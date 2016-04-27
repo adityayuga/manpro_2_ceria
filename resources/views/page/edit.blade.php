@@ -87,8 +87,6 @@
 	                		
                     </div>
                 </div>
-                
-                <hr>
                 <br>
                 <div id="success"></div>
                 <div class="row">
