@@ -42,8 +42,8 @@ active
                 <li>Informasi dan permintaan layanan dapat dilakukan melalui telepon, email, fax, atau DATANG langsung ke kantor PPP UKDW</li>
                 <li>Libur tahunan tanggal 23 Desember sampai 3 Januari</li>
                 <h1>Jadwal Konselor</h1>
-                <table class="tablebordered">
-                	<tr>
+                <table class="tabelKonsul">
+                	<tr class="jenisKol">
                 		<td>Konselor</td>
                 		<td>Jadwal Konselor</td>
                 	</tr>

@@ -106,8 +106,8 @@ class ArtikelController extends Controller
                             'artikel.id', 
                             'artikel.judul',
                             'artikel.slug', 
-                            'artikel.created_at'
-                            )->where('artikel.judul',  'like', '%'.$kataKunci.'%' )->get();
+                            'artikel.updated_at'
+                            )->where('artikel.judul',  'like', '%'.$kataKunci.'%' )->orderby("updated_at")->get();
         }catch(Exception $e){
             $err_code = 0;
             $error = "error!";

@@ -196,6 +196,7 @@ table {
 td,
 th {
   padding: 0;
+  padding: 5px 10px;
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
@@ -1113,7 +1114,7 @@ a {
 a:hover,
 a:focus {
   color: #23527c;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 a:focus {
   outline: thin dotted;
@@ -1346,7 +1347,7 @@ mark,
   text-transform: capitalize;
 }
 .text-muted {
-  color: #777;
+  color: white;
 }
 .text-primary {
   color: #337ab7;
@@ -4565,6 +4566,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-form {
   border-color: #e7e7e7;
   background-color: #2F2E2E;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.3);
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,

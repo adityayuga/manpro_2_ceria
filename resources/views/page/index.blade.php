@@ -26,7 +26,7 @@ active
     <div class="container">
         <div class="row">
              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                
+                    <h1 class="post-title">Artikel-Artikel</h2><hr><br>
                     @foreach ($artikel as $a_artikel)
                 <div class="post-preview">
                     <a  href="{{ URL::to('/umum/' . $a_artikel->slug) }}" value="<?=$a_artikel->slug?>">
@@ -35,22 +35,22 @@ active
                             <?PHP if(!$a_artikel->path == "")
                             {?>
                             <td width="20%" align="center">
-                                <img src="<?=$a_artikel->path?>" alt="<?=$a_artikel->path?>" height="200" width="300" />
+                                <img src="<?=$a_artikel->path?>" alt="<?=$a_artikel->path?>" height="200" width="300" 
+
+                                />
                             </td>
                             <?PHP }?>
                             <td align="left">
                                 <h2 class="post-title">
-                            {{$a_artikel->judul}}
+                            {!!str_limit($a_artikel->judul, 30,"...")!!}
                                 </h2>
-                            <h3 class="post-subtitle">
+                            <p class="post-subtitle">
                             {!!str_limit($a_artikel->deskripsi,60,"...")!!}
-                            </h3></td>
+                            </p></td>
                         </tr>
-                        </table>
-
-                                                 
+                        </table>                         
                     </a>
-                    <p class="post-meta"><!-- kategori artikel dari database-->Category: {{ucfirst($a_artikel->kategori)}}  Posted on {{$a_artikel->created_at}}</p>
+                    <p class="post-meta"><!-- kategori artikel dari database--><b>Category </b> {{ucfirst($a_artikel->kategori)}} <b>Posted on </b> {{$a_artikel->created_at}}</p>
                 </div>
                 <hr>
                     @endforeach

@@ -13,7 +13,8 @@ p {
   margin: 0px;
 }
 p a {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
+  color: #AB0535;
 }
 h1,
 h2,
@@ -231,7 +232,7 @@ hr.small {
 }
 .post-preview > .post-meta {
   color: #808080;
-  font-size: 18px;
+  font-size: 15px;
   font-style: italic;
   margin-top: 10px;
 }
@@ -265,7 +266,10 @@ hr.small {
   border-bottom-left-radius: 5px;
 }
 footer {
-  padding: 50px 0 65px;
+  margin-top: 100px;
+  padding: 10px;
+  color:white;
+  background-color: #2F2E2E;
 }
 footer .list-inline {
   margin: 0;
@@ -275,6 +279,13 @@ footer .copyright {
   font-size: 14px;
   text-align: center;
   margin-bottom: 0;
+  padding-top: 5px;
+}
+footer .developer{
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 0;
+  color: #AB0535;
 }
 .floating-label-form-group {
   font-size: 14px;
@@ -393,4 +404,34 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #0085a1;
+}
+
+.div-team {
+    margin-top: 40px;
+}
+
+.div-team > p {
+    margin: 10px;
+}
+
+.team-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    
+}
+
+.fa-2x{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tabelKonsul tr td {
+  border-style: solid;
+  padding: 5px 10px;
+}
+
+.jenisKol{
+  text-align: center;
+  font-weight: bold;
 }

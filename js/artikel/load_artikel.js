@@ -49,7 +49,7 @@ $(document).ready(function(){
 							var count = 0;
 							$.each( result.data, function() {
 							
-								var date = new Date ( result.data[count].created_at );
+								var date = new Date ( result.data[count].updated_at );
 								var weekdays = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
 
 								var weekday = weekdays[date.getDay()];

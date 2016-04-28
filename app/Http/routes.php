@@ -49,6 +49,9 @@ Route::group(['middleware' => 'web'], function () {
 		return view('page.kelola');
 	});
 	Route::get('kelola/edit/{id}', 'ArtikelController@artikel_to_edit');
+	Route::get('/developers', function() {
+		return view('page.developer');
+	});
     //Route::auth();
 	//-------------------------------------AUTH------------------------------------//
 	Route::get('login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@showLoginForm']);

@@ -1,9 +1,10 @@
 $(document).ready(function(){
+	$('#judul').get(0).focus();
+
 	$('#isi_artikel').summernote({
 		height: 300,
 		minHeight: 400,
-		maxHeight: 400,
-		focus: true
+		maxHeight: 900
 	});
 	
 	//$('#isi_artikel').summernote('code', "hello sam er nod");

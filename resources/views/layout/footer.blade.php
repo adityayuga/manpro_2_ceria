@@ -13,8 +13,8 @@
                           </a>
                        </li> 
                     </ul>--}}
-                        <p class="copyright text-muted">Copyright &copy; Pusat Pengembangan Pribadi 2016</p>
-                        <p class="copyright text-muted">Universitas Kristen Duta Wacana</p>
+                        <p class="copyright text-muted">Copyright &copy; PPP Universitas Kristen Duta Wacana 2016</p>
+                        <a href="{{url('/developers')}}"><p class="developer">Developers</a>
                 </div>
             </div>
         </div>
