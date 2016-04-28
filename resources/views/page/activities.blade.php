@@ -37,16 +37,16 @@ active
                             <?PHP if(!$a_artikel->path == "")
                             {?>
                             <td width="30%" align="left">
-                                <img src="<?=$a_artikel->path?>" alt="<?=$a_artikel->path?>" height="140" />
+                                <img class="img-responsive container" src="<?=$a_artikel->path?>" alt="<?=$a_artikel->path?>" width="300" />
                             </td>
                             <?PHP }?>
                             <td align="left">
-                                <h2 class="post-title">
+                                <h2 class="post-title responsivetexth2">
                             {{$a_artikel->judul}}
                                 </h2>
-                            <h3 class="post-subtitle">
+                            <p class="post-subtitle responsivetexth3">
                             {!!str_limit($a_artikel->deskripsi,60,"...")!!}
-                            </h3></td>
+                            </p></td>
                         </tr>
                         </table>
                     </a>

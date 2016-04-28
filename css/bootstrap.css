@@ -1602,7 +1602,7 @@ pre code {
 }
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 750px; 
   }
 }
 @media (min-width: 992px) {
@@ -6795,4 +6795,61 @@ button.close {
 
 .edittengah{
   padding-top: 80px;
+}
+
+/*.wraptext{
+  width: 100%;
+  word-wrap: break-word;
+} */
+
+@media (min-width: 240px){
+  .responsivetexth2{
+    font-size: 70%;
+    width: 100%;
+    word-wrap: break-word;
+  }
+  .responsivetexth3{
+    font-size: 50%;
+    width: 100%;
+    word-wrap: break-word;
+  }
+}
+
+@media (min-width: 480px){
+  .responsivetexth2{
+    font-size: 110%;
+    width: 100%;
+    word-wrap: break-word;
+  }
+  .responsivetexth3{
+    font-size: 90%;
+    width: 100%;
+    word-wrap: break-word;
+  }  
+}
+
+@media (min-width: 768px){
+  .responsivetexth2{
+    font-size: 130%;
+    width: 100%;
+    word-wrap: break-word;
+  }
+  .responsivetexth3{
+    font-size: 110%;
+    width: 100%;
+    word-wrap: break-word;
+  }  
+}
+
+@media (min-width: 1200px){
+  .responsivetexth2{
+    font-size: 140%;
+    width: 100%;
+    word-wrap: break-word;
+  }
+  .responsivetexth3{
+    font-size: 120%; 
+    width: 100%;
+    word-wrap: break-word;
+  } 
 }
