@@ -229,7 +229,7 @@ class ArtikelController extends Controller
 			    mkdir($dir, 0777, true);
 			}
 
-		    $imgPath = $dir.$imgFilename.'.'.$imgExt;
+		    $imgPath = $dir.$imgFilename.rand(0, 15).'.'.$imgExt;
 		    // Save the file to disk if it doesn't exist
 		    if (!file_exists($imgPath)) {
 		        $imgDecoded = base64_decode($imgBase64);
@@ -240,7 +240,7 @@ class ArtikelController extends Controller
 		        fwrite($fp, $imgDecoded);
 		        fclose($fp);
 		    }
-		    return 'src="'.$imgPath.'"';
+		    return 'src="../'.$imgPath.'"';
 		}, $html);
 
 		return $html;
