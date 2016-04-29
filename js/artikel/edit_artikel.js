@@ -74,8 +74,11 @@ $(document).ready(function(){
 
 		        errorsHtml += "</div>";
 		  
-				$('.alerts').html("<div>gila lu</div>");
+				$('.alerts').html("<div></div>");
 		        $('.alerts').append(errorsHtml).fadeIn(200).fadeToggle(10000).fadeOut(50);
+		        $('html, body').animate({
+							scrollTop: $('.edittengah').offset().top
+						}, 1000);
 		    }
 		}, "json");
 	}
