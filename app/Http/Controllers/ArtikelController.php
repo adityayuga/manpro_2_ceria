@@ -16,9 +16,17 @@ class ArtikelController extends Controller
 {
 	protected $rules = [
         'judul' => ['required', 'max:255', 'unique:artikel,judul'],
+        'deskripsi' => ['required', 'max:255'],
         'isi' => ['required'],
         'kategori' => ['required'],
-        'deskripsi' => ['required', 'max:255'],
+    ];
+
+    protected $messageRules = [
+            'judul.required'  => ' Harus Isi judul ' ,
+            'judul.unique'  => ' Judul sudah Diambil ',
+            'deskripsi.required' => ' Harus Isi deskripsi ',
+            'isi.required' => ' Harus Isi content ',
+            'kategori.required' => ' Harus pilih kategori ',
     ];
 
     protected $rulesEdit = [
@@ -26,6 +34,13 @@ class ArtikelController extends Controller
         'isi' => ['required'],
         'kategori' => ['required'],
         'deskripsi' => ['required', 'max:255'],
+    ];
+
+    protected $messageRulesEdit = [
+            'judul.required'  => ' Harus Isi judul ',
+            'isi.reqired' => 'isi content juga',
+            'deskripsi.required' => ' Harus Isi deskripsi ',
+            'kategori.required' => ' Harus pilih kategori ',
     ];
 
     public function detail_artikel($artikel, $slug){
@@ -57,7 +72,9 @@ class ArtikelController extends Controller
         $error;
         $message;
 
-        $this->validate($request, $this->rules);
+        
+
+       $this->validate($request, $this->rules , $this->messageRules);
 
         
     	try{
@@ -153,7 +170,7 @@ class ArtikelController extends Controller
         $error;
         $message;
 
-        $this->validate($request, $this->rulesEdit);
+        $this->validate($request, $this->rulesEdit, $this->messageRulesEdit);
         
     	try{
     		$artikel = Artikel::find($request->id);

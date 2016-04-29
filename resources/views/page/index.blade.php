@@ -48,7 +48,12 @@ active
                         </tr>
                         </table>                         
                     </a>
-                    <p class="post-meta"><!-- kategori artikel dari database--><b>Category </b> <a href="{{ $a_artikel->kategori }}">{{ucfirst($a_artikel->kategori)}}</a> <b>Posted on </b> {{$a_artikel->created_at}}</p>
+                    <?php if ($a_artikel->kategori == "umum") {?>
+                        <p class="post-meta"><!-- kategori artikel dari database--><b>Category </b> <a href="{{URL::to('umum')}}">{{ucfirst($a_artikel->kategori)}}</a> <b>Posted on </b> {{$a_artikel->created_at}}</p>
+                    <?php } 
+                       else{ ?>
+                        <p class="post-meta"><!-- kategori artikel dari database--><b>Category </b> <a href="{{ $a_artikel->kategori }}">{{ucfirst($a_artikel->kategori)}}</a> <b>Posted on </b> {{$a_artikel->created_at}}</p>
+                     <?php } ?>
                 </div>
                 <hr>
                     @endforeach
