@@ -6,8 +6,14 @@ $(document).ready(function(){
 		minHeight: 400,
 		maxHeight: 900
 	});
+
+
 	
-	//$('#isi_artikel').summernote('code', "hello sam er nod");
+	$("img").addClass("img-responsive");
+
+	$("#inputpicture").change(function(){
+	    gantiGambar(this);
+	});
 
 	$('#btn_submit').click(function(e){
 		e.preventDefault();
@@ -16,6 +22,7 @@ $(document).ready(function(){
 		var judulArtikel = $('#judul').val();
 		var kategori = $('input[name="etype"]:checked').val();
 		var deskripsi = $('#deskripsi').val();
+
 		if($('#inputpicture').val() == ""){
 			requestUploadArtikel(judulArtikel, isiArtikel, kategori, deskripsi, null);
 		}else{
@@ -57,13 +64,12 @@ $(document).ready(function(){
 				if(result){
 					$('.alerts').html("");
 					if(result.error_code==0){
-
-						$('.kateg').prop('checked', false);
 						$('#isi_artikel').summernote('code', '');
 						$('#judul').val("");
 						var inputFile = $('input[name="etype"]:checked');
-						inputFile.replaceWith(inputFile.val('').clone(true));;
+						inputFile.replaceWith(inputFile.val('umum').clone(true));;
 						$('#deskripsi').val("");
+						$('#fotoxx').attr('src', null);
 						$('#judul').val("");
 						$('.alerts').append("<div class='alert alert-success text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200).fadeToggle(10000).fadeOut(50);
 						$('html, body').animate({
@@ -97,6 +103,18 @@ $(document).ready(function(){
 		}, "json");
 	}
 
+
+
+	function gantiGambar(input) {
+	    if (input.files && input.files[0]) {
+	        var reader = new FileReader();
+	        reader.onload = function (e) {
+	            $('#fotoxx').attr('src', e.target.result);
+	        }
+
+	        reader.readAsDataURL(input.files[0]);
+	    }
+	}
 
 	function imageupload(element, ajax){
 		console.log('testimageupload');

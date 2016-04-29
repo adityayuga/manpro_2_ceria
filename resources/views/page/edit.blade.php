@@ -21,7 +21,8 @@
 
 @section('script')
     <script type="text/javascript" src="{{ asset('js/artikel/edit_artikel.js') }}"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.js"></script>
+    <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.js"></script>-->
+    <script type="text/javascript" src="{{ asset('js/artikel/summernote.js') }}"></script>
 @stop
 
 
@@ -43,7 +44,7 @@
                 </div>
                 <div class="row control-group">
                 <!-- displaying foto disini -->
-                    <img width="230" src="../{{ $a_artikel->path }}">
+                    <img id="fotoxx" width="230" src="../{{ $a_artikel->path }}">
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 controls">

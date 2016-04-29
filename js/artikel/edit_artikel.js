@@ -3,8 +3,14 @@ $(document).ready(function(){
 	$('#isi_artikel').summernote({
 		height: 300,
 		minHeight: 400,
-		maxHeight: 400,
-		focus: true
+		maxHeight: 400
+	});
+
+
+	$("img").addClass("img-responsive");
+
+	$("#inputpicture").change(function(){
+	    gantiGambar(this);
 	});
 
 
@@ -52,7 +58,7 @@ $(document).ready(function(){
 			url: window.location + "/update_artikel",
 			success: function(result){
 				if(result){
-					window.location.href = "../../kelola";
+					window.location.href = "../kelola";
 				}
 			},
 			error : function(jqXhr) {
@@ -74,6 +80,18 @@ $(document).ready(function(){
 		}, "json");
 	}
 
+
+	function gantiGambar(input) {
+	    if (input.files && input.files[0]) {
+	        var reader = new FileReader();
+	        reader.onload = function (e) {
+	            $('#fotoxx').attr('src', e.target.result);
+	        }
+
+	        reader.readAsDataURL(input.files[0]);
+	    }
+	}
+	
 	function imageupload(element, ajax){
 		console.log('testimageupload');
 		

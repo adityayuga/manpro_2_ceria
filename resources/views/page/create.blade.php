@@ -27,7 +27,8 @@ active
 
 @section('script')
     <script type="text/javascript" src="{{ asset('js/artikel/create_artikel.js') }}"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.js"></script>
+    <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.js"></script>-->
+    <script type="text/javascript" src="{{ asset('js/artikel/summernote.js') }}"></script>
 @stop
 
 
@@ -46,7 +47,10 @@ active
                     </div>
                 </div>
                 <br>
-                
+                <div class="row control-group">
+                    <!-- displaying foto disini -->
+                    <img id="fotoxx" class="img-responsive" style="width: 300px; height: 320px; min-height: 500px; min-width: 360px;">
+                </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 controls">
                         <label for="inputpicture">Foto Artikel</label>
@@ -71,9 +75,9 @@ active
                 <div class="row control-group">
             		 <div class="form-group col-xs-12 controls">
 	                    <label>Jenis Artikel</label>
-	                		<label><input class="kateg" type="radio" name="etype" value="umum" checked="checked"> Umum </label>
-	                		<label><input class="kateg" type="radio" name="etype" value="selfhelp"> Self Help </label>
-	                		<label><input class="kateg" type="radio" name="etype" value="activities"> Activities </label>
+	                		<label><input type="radio" name="etype" value="umum" checked="checked"> Umum </label>
+	                		<label><input type="radio" name="etype" value="selfhelp"> Self Help </label>
+	                		<label><input type="radio" name="etype" value="activities"> Activities </label>
                     </div>
 
                 </div>
