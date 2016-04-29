@@ -71,9 +71,9 @@ active
                 <div class="row control-group">
             		 <div class="form-group col-xs-12 controls">
 	                    <label>Jenis Artikel</label>
-	                		<label><input type="radio" name="etype" value="umum" checked="checked"> Umum </label>
-	                		<label><input type="radio" name="etype" value="selfhelp"> Self Help </label>
-	                		<label><input type="radio" name="etype" value="activities"> Activities </label>
+	                		<label><input class="kateg" type="radio" name="etype" value="umum" checked="checked"> Umum </label>
+	                		<label><input class="kateg" type="radio" name="etype" value="selfhelp"> Self Help </label>
+	                		<label><input class="kateg" type="radio" name="etype" value="activities"> Activities </label>
                     </div>
 
                 </div>

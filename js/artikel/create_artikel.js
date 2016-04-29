@@ -58,6 +58,7 @@ $(document).ready(function(){
 					$('.alerts').html("");
 					if(result.error_code==0){
 
+						$('.kateg').prop('checked', false);
 						$('#isi_artikel').summernote('code', '');
 						$('#judul').val("");
 						var inputFile = $('input[name="etype"]:checked');
@@ -67,7 +68,7 @@ $(document).ready(function(){
 						$('.alerts').append("<div class='alert alert-success text-center' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200).fadeToggle(10000).fadeOut(50);
 						$('html, body').animate({
 							scrollTop: $('.tambahtengah').offset().top
-						}, 1000);
+						}, 1000);	
 
 					}else{
 						$('.alerts').append("<div class='alert alert-warning text-center alert-message' role='alert'><strong>"+ result.error +"</strong>"+ result.message +"</div>").fadeIn(200).fadeToggle(10000).fadeOut(50);
@@ -89,6 +90,9 @@ $(document).ready(function(){
 		  
 				$('.alerts').html("");
 		        $('.alerts').append(errorsHtml).fadeIn(200).fadeToggle(10000).fadeOut(50);
+		        $('html, body').animate({
+							scrollTop: $('.tambahtengah').offset().top
+						}, 1000);
 		    }
 		}, "json");
 	}

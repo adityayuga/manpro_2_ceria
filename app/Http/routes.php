@@ -28,6 +28,9 @@
 Route::group(['middleware' => 'web'], function () {
 	Route::get('/', 'ArtikelController@get_artikel_umum');
 
+	//mencoba redirect ke root url
+	Route::get('/umum', 'ArtikelController@get_artikel_umum');
+
 	Route::get('/about', function () {
 	    return view('page.about');
 	});
@@ -40,6 +43,7 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/activities','ArtikelController@get_artikel_activities');
 
 	Route::get('/selfhelp','ArtikelController@get_artikel_selfhelp');
+
 
 	Route::get('{artikel}/{slug}', 'ArtikelController@detail_artikel');
 

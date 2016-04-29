@@ -48,7 +48,7 @@ active
                         </tr>
                         </table>                         
                     </a>
-                    <p class="post-meta"><!-- kategori artikel dari database--><b>Category </b> {{ucfirst($a_artikel->kategori)}} <b>Posted on </b> {{$a_artikel->created_at}}</p>
+                    <p class="post-meta"><!-- kategori artikel dari database--><b>Category </b> <a href="{{ $a_artikel->kategori }}">{{ucfirst($a_artikel->kategori)}}</a> <b>Posted on </b> {{$a_artikel->created_at}}</p>
                 </div>
                 <hr>
                     @endforeach

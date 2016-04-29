@@ -4,8 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                        
+                    <div class="site-heading">   
                         <h1>PUSAT PENGEMBANGAN PRIBADI</h1>
                         <hr class="small">
                         <span class="subheading">Universitas Kristen Duta Wacana</span>
@@ -44,7 +43,7 @@
                 </div>
                 <div class="row control-group">
                 <!-- displaying foto disini -->
-                    <img width="230" src="../../{{ $a_artikel->path }}">
+                    <img width="230" src="../{{ $a_artikel->path }}">
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 controls">
