@@ -62,7 +62,7 @@ $(document).ready(function(){
 									"<tr class='"+count+"'>"+
 									"<td>"+count+"</td> <td>"+result.data[count-1].judul+"</td>"+
 									"<td>"+ weekday +" , "+ tgl + "/" + bulan+ "/" +tahun+"</td>"+
-									"<td><a id='"+result.data[count-1].id+"'' href='kelola/edit/"+result.data[count-1].id+"' class='glyphicon glyphicon-pencil'></a></td>"+
+									"<td><a id='"+result.data[count-1].id+"'' href='edit/"+result.data[count-1].id+"' class='glyphicon glyphicon-pencil'></a></td>"+
 									//"<td><a id='"+result.data[count-1].id+"'' href='kelola/"+pindahEdit(result.data[count-1].id)+"' class='glyphicon glyphicon-pencil'></a></td>"+
 									"<td><a class='glyphicon glyphicon-trash delete-artikel' data-id="+result.data[count-1].id+"></a>"+
 									"</td></tr>"

@@ -40,7 +40,7 @@ Route::group(['middleware' => 'web'], function () {
 
 	Route::get('/selfhelp','ArtikelController@get_artikel_selfhelp');
 
-	Route::get('/{artikel}/{slug}', 'ArtikelController@detail_artikel');
+	Route::get('artikel/{artikel}/{slug}', 'ArtikelController@detail_artikel');
 
 	Route::get('/create', function() {
 		return view('page.create');
@@ -48,7 +48,7 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/kelola', function() {
 		return view('page.kelola');
 	});
-	Route::get('kelola/edit/{id}', 'ArtikelController@artikel_to_edit');
+	Route::get('edit/{id}', 'ArtikelController@artikel_to_edit');
 	Route::get('/developers', function() {
 		return view('page.developer');
 	});
