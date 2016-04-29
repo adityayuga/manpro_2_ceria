@@ -29,7 +29,7 @@ active
                     <h1 class="post-title">Artikel-Artikel</h2><hr><br>
                     @foreach ($artikel as $a_artikel)
                 <div class="post-preview">
-                    <a  href="{{ URL::to('/umum/' . $a_artikel->slug) }}" value="<?=$a_artikel->slug?>">
+                    <a  href="{{ URL::to('artikel/umum/' . $a_artikel->slug) }}" value="<?=$a_artikel->slug?>">
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                             <?PHP if(!$a_artikel->path == "")
