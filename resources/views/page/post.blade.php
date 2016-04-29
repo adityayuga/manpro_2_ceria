@@ -34,11 +34,11 @@
                     else
                     { ?>
                    @foreach($artikel as $a_artikel)
-                   <h2 class="section-heading">{{$a_artikel->judul}}</h2>
+                   <h2 class="section-heading-detailPost">{{$a_artikel->judul}}</h2>
                    <table>
                    <tr>
-                    <td>
-                   <p >Posted on {{$a_artikel->created_at}}</p></td>
+                    <td class="td-post-detail">
+                   <p class="post-meta-detail"><b>Posted on</b> {{$a_artikel->created_at}}</p></td>
                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td style="padding : 0px 2px 15px 3px;  ">
                     <div class="fb-share-button" data-href="#" data-layout="button" data-mobile-iframe="true"></div>
@@ -58,7 +58,7 @@
                    <br>
                    <?PHP if(!$a_artikel->path == "")
                         {?>
-                        <center><img class="img-responsive" src="{{asset($a_artikel->path)}}" alt="<?=$a_artikel->path?>" width="500" />
+                        <center><img class="img-responsive-artikel" src="{{asset($a_artikel->path)}}" alt="<?=$a_artikel->path?>" width="500" />
                     </center></br>
                         <?PHP }?>
                         

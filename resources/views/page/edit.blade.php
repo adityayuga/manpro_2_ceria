@@ -1,19 +1,4 @@
 @extends('layout.layout')
-@section('header_home')
-    <header class="intro-header" >
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">   
-                        <h1>PUSAT PENGEMBANGAN PRIBADI</h1>
-                        <hr class="small">
-                        <span class="subheading">Universitas Kristen Duta Wacana</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-@stop
 
 @section('css')
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet">

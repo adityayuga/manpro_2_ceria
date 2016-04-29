@@ -218,7 +218,7 @@ hr.small {
 .post-preview > a:hover,
 .post-preview > a:focus {
   text-decoration: none;
-  color: #0085a1;
+  color: #AB0535;
 }
 .post-preview > a > .post-title {
   font-size: 30px;
@@ -242,7 +242,7 @@ hr.small {
 }
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
-  color: #0085a1;
+  color: #AB0535;
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
@@ -253,6 +253,11 @@ hr.small {
 .section-heading {
   font-size: 36px;
   margin-top: 60px;
+  font-weight: 700;
+}
+.section-heading-detailPost {
+  font-size: 36px;
+  margin-top: 15%;
   font-weight: 700;
 }
 .caption {
@@ -285,7 +290,7 @@ footer .developer{
   font-size: 20px;
   text-align: center;
   margin-bottom: 0;
-  color: #AB0535;
+  color: #fff;
 }
 .floating-label-form-group {
   font-size: 14px;
@@ -420,7 +425,6 @@ body {
     border-radius: 50%;
     
 }
-
 .fa-2x{
     padding-left: 10px;
     padding-right: 10px;
@@ -434,4 +438,17 @@ body {
 .jenisKol{
   text-align: center;
   font-weight: bold;
+}
+.post-meta-detail{
+  color: #808080;
+  font-size: 15px;
+  font-style: italic;
+}
+.td-post-detail{
+  padding: 0;
+}
+.image-responsive-artikel{
+  max-width: 500px;
+  max-height: 250px;
+  margin: 20px 20px;
 }

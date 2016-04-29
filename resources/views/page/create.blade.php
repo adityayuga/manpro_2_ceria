@@ -1,22 +1,5 @@
 @extends('layout.layout')
 
-@section('header_create')
-    <header class="intro-header" style="background-image: url('img/create-bg.jpg')">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                        <img class="img-responsive" src="img/logoukdw.png">
-                        <h1>PUSAT PENGEMBANGAN PRIBADI</h1>
-                        <hr class="small">
-                        <span class="subheading">Universitas Kristen Duta Wacana</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-@stop
-
 @section('selected-create')
 active
 @endsection
@@ -49,7 +32,7 @@ active
                 <br>
                 <div class="row control-group">
                     <!-- displaying foto disini -->
-                    <img id="fotoxx" class="img-responsive" style="width: 300px; height: 320px; min-height: 500px; min-width: 360px;">
+                    <img id="fotoxx" class="img-responsive" max-width="500px" max-height="250px";>
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 controls">
