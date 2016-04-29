@@ -241,7 +241,7 @@ class ArtikelController extends Controller
 		        fwrite($fp, $imgDecoded);
 		        fclose($fp);
 		    }
-		    return 'src="../../'.$imgPath.'"';
+		    return 'src="../'.$imgPath.'"';
 		}, $html);
 
 		return $html;
