@@ -136,6 +136,7 @@ class ArtikelController extends Controller
                                     'artikel.deskripsi', 
                                     'artikel.judul', 
                                     'artikel.content', 
+                                    'artikel.path',
                                     'artikel.kategori')->where('artikel.id',  'like', '%'.$id.'%' )->get();
         }catch(Exception $e){
             $err_code = 0;
