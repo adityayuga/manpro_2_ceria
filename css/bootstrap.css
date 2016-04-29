@@ -2123,6 +2123,7 @@ pre code {
     width: 75%;
   }
   .col-lg-8 {
+    word-wrap: break-word;
     width: 66.66666667%;
   }
   .col-lg-7 {
@@ -2256,6 +2257,7 @@ pre code {
   }
   .col-lg-offset-2 {
     margin-left: 16.66666667%;
+    word-wrap: break-word;
   }
   .col-lg-offset-1 {
     margin-left: 8.33333333%;

@@ -36,6 +36,7 @@ Route::group(['middleware' => 'web'], function () {
 	    return view('page.services');
 	});
 
+	Route::get('edit/{id}', 'ArtikelController@artikel_to_edit');
 	Route::get('/activities','ArtikelController@get_artikel_activities');
 
 	Route::get('/selfhelp','ArtikelController@get_artikel_selfhelp');
@@ -48,7 +49,6 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/kelola', function() {
 		return view('page.kelola');
 	});
-	Route::get('edit/{id}', 'ArtikelController@artikel_to_edit');
 	Route::get('/developers', function() {
 		return view('page.developer');
 	});
