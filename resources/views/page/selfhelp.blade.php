@@ -29,7 +29,7 @@ active
              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     @foreach ($artikel as $a_artikel)
                 <div class="post-preview">
-                    <a href="{{ URL::to('/selfhelp/' . $a_artikel->slug) }}" value="<?=$a_artikel->slug?>">
+                    <a href="{{ URL::to('selfhelp/' . $a_artikel->slug) }}" value="<?=$a_artikel->slug?>">
                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                             <?PHP if(!$a_artikel->path == "")

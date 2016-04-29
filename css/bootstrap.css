@@ -11,8 +11,7 @@ html {
 }
 .panel-heading.note-toolbar button{
     position:relative;
-    width:3.5em;
-    height:3em;
+    width: auto;
 }
 
 .note-btn-group .btn-group .note-fontname{

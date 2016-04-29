@@ -43,9 +43,13 @@
                     </div>
                 </div>
                 <div class="row control-group">
+                <!-- displaying foto disini -->
+                    <img width="230" src="../../{{ $a_artikel->path }}">
+                </div>
+                <div class="row control-group">
                     <div class="form-group col-xs-12 controls">
                         <label for="inputpicture">Ganti Foto Artikel</label>
-                        <input type="file" name="picture" class="" id="inputpicture">
+                        <input type="file" name="picture" class="" id="inputpicture" data-buttonText="Your label here.">
                     </div>
                 </div>
                 <div class="row control-group">
@@ -69,19 +73,19 @@
                      <?PHP if($a_artikel->kategori == "umum"){?>
                             <label><input class="CBumum" type="radio" name="etype" value="umum" checked="true"> Umum </label>
                             <label><input class="CBsh" type="radio" name="etype" value="selfhelp"> Self Help </label>
-                            <label><input class="CBact" type="radio" name="etype" value="activites"> Activities </label>
+                            <label><input class="CBact" type="radio" name="etype" value="activities"> Activities </label>
                         <?PHP }
                             elseif($a_artikel->kategori == "selfhelp"){
                         ?>
                             <label><input class="CBumum" type="radio" name="etype" value="umum" > Umum </label>
                             <label><input class="CBsh" type="radio" name="etype" value="selfhelp" checked="true"> Self Help </label>
-                            <label><input class="CBact" type="radio" name="etype" value="activites"> Activities </label>
+                            <label><input class="CBact" type="radio" name="etype" value="activities"> Activities </label>
                         <?php } 
                             else{
                         ?>
                             <label><input class="CBumum" type="radio" name="etype" value="umum" > Umum </label>
                             <label><input class="CBsh" type="radio" name="etype" value="selfhelp"> Self Help </label>
-                            <label><input class="CBact" type="radio" name="etype" value="activites" checked="true"> Activities </label>
+                            <label><input class="CBact" type="radio" name="etype" value="activities" checked="true"> Activities </label>
                         <?php }?>
 	                    
 	                		
