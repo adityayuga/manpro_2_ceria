@@ -7,11 +7,15 @@
                     <div class="site-heading">
                         <img class="img-responsive" src="img/logoukdw.png">
                         <h1>PUSAT PENGEMBANGAN PRIBADI</h1>
+                        <p class="italic">People's development center</p>
                         <hr class="small">
                         <span class="subheading">Universitas Kristen Duta Wacana</span>
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="moto">
+                <p class="moto">- Anda dilayani supaya anda dapat melayani. -</p>
         </div>
     </header>
 @stop
