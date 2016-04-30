@@ -1157,7 +1157,7 @@ img {
 }
 hr {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border: 0;
   border-top: 1px solid #eee;
 }
@@ -3148,8 +3148,8 @@ fieldset[disabled] .btn-default.focus {
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #AB0535;
-  border-color: #AB0535;
+  background-color: #ADC743;
+  border-color: #ADC743;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -4527,7 +4527,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #ffffff;
+  color: #ADC743;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
@@ -4539,13 +4539,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #ffffff;
-  background-color: #AB0535;
+  background-color: #ADC743;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #ffffff;
-  background-color: #AB0535;
+  background-color: #ADC743;
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,

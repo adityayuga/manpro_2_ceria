@@ -14,7 +14,7 @@ p {
 }
 p a {
   /*text-decoration: underline;*/
-  color: #AB0535;
+  color: #fff;
 }
 h1,
 h2,
@@ -30,7 +30,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #0085a1;
+  color: #ADC743;
 }
 a img:hover,
 a img:focus {
@@ -75,7 +75,7 @@ hr.small {
   }
   .navbar-custom .navbar-brand:hover,
   .navbar-custom .navbar-brand:focus {
-    /*color: #AB0535;*/
+    color: #ADC743;
   }
   .navbar-custom .nav li a {
     color: white;
@@ -83,7 +83,7 @@ hr.small {
   }
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
-    background-color: #AB0535;
+    background-color: #ADC743;
   }
 }
 @media only screen and (min-width: 1170px) {
@@ -122,7 +122,7 @@ hr.small {
   }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
-    background-color: #AB0535;
+    background-color: #ADC743;
     color: #ffffff;
   }
   .navbar-custom.is-visible {
@@ -218,7 +218,7 @@ hr.small {
 .post-preview > a:hover,
 .post-preview > a:focus {
   text-decoration: none;
-  color: #AB0535;
+  color: #ADC743;
 }
 .post-preview > a > .post-title {
   font-size: 30px;
@@ -242,7 +242,7 @@ hr.small {
 }
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
-  color: #AB0535;
+  color: #ADC743;
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
@@ -281,13 +281,13 @@ footer .list-inline {
   padding: 0;
 }
 footer .copyright {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   margin-bottom: 0;
   padding-top: 5px;
 }
 footer .developer{
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
   margin-bottom: 0;
   color: #fff;
