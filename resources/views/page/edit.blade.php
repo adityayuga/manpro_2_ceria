@@ -29,7 +29,13 @@
                 </div>
                 <div class="row control-group">
                 <!-- displaying foto disini -->
+				<?PHP if(!$a_artikel->path == "")
+                            {?>
                     <img id="fotoxx" width="230" src="../{{ $a_artikel->path }}">
+							<?PHP } else { ?>
+                    <img id="fotoxx" width="230" >
+
+							<?PHP } ?>
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 controls">
@@ -81,6 +87,7 @@
                 <div class="row">
                     <div class="form-group col-xs-12">
                         <input class="btn btn-success" id="btn_submit" type="submit">
+                        <a href=" {{URL::to('/kelola')}}" class="btn btn-warning">Cancel</a>
                     @endforeach
 
                     </div>
