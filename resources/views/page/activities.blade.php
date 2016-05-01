@@ -38,12 +38,12 @@ active
                     <a  href="{{ URL::to('activity/' . $a_artikel->slug) }}" value="<?=$a_artikel->slug?>">
                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
+                            <td width="30%" align="left">
                             <?PHP if(!$a_artikel->path == "")
                             {?>
-                            <td width="30%" align="left">
                                 <img class="img-responsive container" src="<?=$a_artikel->path?>" alt="<?=$a_artikel->path?>" width="300" />
+                            <?PHP } ?>
                             </td>
-                            <?PHP }?>
                             <td align="left">
                                 <h2 class="post-title responsivetexth2">
                             {!!str_limit($a_artikel->judul, 30,"...")!!}
