@@ -39,7 +39,7 @@
           <div class="col-sm-4 div-team">
             <img class="team-image" src="img/team/monik.png">
             <p>Monika Suryadarma</p>
-            <p class="jobdesk">Programmer</p>
+            <p class="jobdesk">Back End Developer</p>
             <a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-2x"></i></a>
             <a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
             <a href="https://www.twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
@@ -48,7 +48,7 @@
           <div class="col-sm-4 div-team">
             <img class="team-image" src="img/team/yuga.png">
             <p>Aditya Yuga Pradhana</p>
-            <p class="jobdesk">Programmer</p>
+            <p class="jobdesk">Back End Developer</p>
             <a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-2x"></i></a>
             <a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
             <a href="https://www.twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
@@ -57,7 +57,7 @@
           <div class="col-sm-4 div-team">
             <img class="team-image" src="img/team/yohanes.png">
             <p>Yohanes</p>
-            <p class="jobdesk">Programmer</p>
+            <p class="jobdesk">Back End Developer</p>
             <a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-2x"></i></a>
             <a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
             <a href="https://www.twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
@@ -66,7 +66,7 @@
           <div class="col-sm-4 div-team">
             <img class="team-image" src="img/team/agus.png">
             <p>Agustianto Purnomo</p>
-            <p class="jobdesk">Desainer</p>
+            <p class="jobdesk">Front End Developer</p>
             <a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-2x"></i></a>
             <a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
             <a href="https://www.twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
@@ -75,7 +75,7 @@
           <div class="col-sm-4 div-team">
             <img class="team-image" src="img/team/rico.png">
             <p>Rico Manurung</p>
-            <p class="jobdesk">Desainer</p>
+            <p class="jobdesk">Front End Developer</p>
             <a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-2x"></i></a>
             <a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
             <a href="https://www.twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
@@ -120,7 +120,7 @@
            <div class="col-sm-4 div-team">
             <img class="team-image" src="img/team/yosa.jpg">
             <p>R. Yosa Mikha Pangestu</p>
-            <p class="jobdesk">Pelatih</p>
+            <p class="jobdesk">Trainer</p>
             <a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-2x"></i></a>
             <a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
             <a href="https://www.twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
@@ -129,7 +129,7 @@
            <div class="col-sm-4 div-team">
             <img class="team-image" src="img/team/dedy.png">
             <p>Dedy Susanto</p>
-            <p class="jobdesk">Pelatih</p>
+            <p class="jobdesk">Trainer</p>
             <a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-2x"></i></a>
             <a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
             <a href="https://www.twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
