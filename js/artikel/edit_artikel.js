@@ -1,5 +1,12 @@
 $(document).ready(function(){
+	
+
 	var id = window.location.href.slice(window.location.href.indexOf('dit/') + 4);
+	var fotoSrc = $('#fotoxx').attr('src');
+	var cekButton = "";
+	var imgSudahBerganti = "";
+	var x ;
+
 	$('#isi_artikel').summernote({
 		height: 300,
 		minHeight: 400,
@@ -9,10 +16,33 @@ $(document).ready(function(){
 
 	$("img").addClass("img-responsive");
 
+	if (fotoSrc != null) {
+		$('#btn-delete-foto').toggle('show');	
+	}
+
 	$("#inputpicture").change(function(){
 	    gantiGambar(this);
 	});
 
+	$('#btn-delete-foto').click(function(event){	
+		//$('#fotoBackup').attr('src', $('#fotoxx').attr('src'));
+		x = $('#inputpicture').val();
+		$('#fotoxx').toggle('hide');
+        $('#btn-delete-foto').toggle('show');
+		$('#btn-kembalikan-foto').toggle('show');
+		$('#fotoxx').attr('src', null);
+		$('#inputpicture').val('');
+		cekButton = "kembalikan";
+	});
+
+	$('#btn-kembalikan-foto').click(function(event){
+		$('#fotoxx').attr('src', fotoSrc);
+		$('#fotoxx').toggle('show');
+        $('#btn-delete-foto').toggle('show');
+		$('#btn-kembalikan-foto').toggle('show');
+
+		cekButton = "delete";
+	});
 
 	$('#btn_submit').click(function(e){
 		e.preventDefault();
@@ -23,7 +53,6 @@ $(document).ready(function(){
 		var kategori = $('input[name="etype"]:checked').val();
 
 		if($('#inputpicture').val() == ""){
-			
 			requestUploadArtikel(judulArtikel, isiArtikel, kategori, deskripsiArtikel, null);
 		}
 		else{
@@ -32,6 +61,7 @@ $(document).ready(function(){
 			}
 
 			imageupload($('#inputpicture').get(0), ajax);
+
 		}
 		
 							
@@ -87,10 +117,25 @@ $(document).ready(function(){
 	function gantiGambar(input) {
 	    if (input.files && input.files[0]) {
 	        var reader = new FileReader();
+	        imgSudahBerganti = "OK";
 	        reader.onload = function (e) {
 	            $('#fotoxx').attr('src', e.target.result);
+	            fotoSrc = $('#fotoxx').attr('src');
+				if (cekButton == "kembalikan") {
+					$('#fotoxx').toggle('show');
+			        $('#btn-delete-foto').toggle('show');
+					$('#btn-kembalikan-foto').toggle('show');	
+					cekButton = "delete";
+				}
+				else if(fotoSrc != null ){
+					if ($('#btn-delete-foto').is(":hidden")) {
+						$('#btn-delete-foto').toggle('show');
+					}
+				}
+				else if(cekButton == null){
+					
+				}
 	        }
-
 	        reader.readAsDataURL(input.files[0]);
 	    }
 	}

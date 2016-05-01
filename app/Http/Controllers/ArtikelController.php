@@ -180,6 +180,10 @@ class ArtikelController extends Controller
                 File::delete($artikel->path);
                 $artikel->path = $this->saveImage($request->image);
             }
+            else{   
+                File::delete($artikel->path);
+                $artikel->path = "";
+            }
             $artikel->content = $this->generateImage($request->isi);
             $artikel->slug = str_replace(" ", '-', strtolower($request->judul));
             $artikel->kategori = $request->kategori;
@@ -200,6 +204,26 @@ class ArtikelController extends Controller
             $message = ", Artikel gagal diedit!";
         }
 
+        return response()->json(['error_code' => $err_code, 'error' => $error, 'message' => $message]);
+    }
+
+    public function deleteGambar(Request $request){
+        $err_code = 0;
+        $error = "Warning!";
+        $message = "";
+        try{
+            $artikel = Artikel::find($request->id);
+            if($request->gambar != ""){
+                File::delete($artikel->path);
+                $artikel->path = "";
+                $message = "Gambar Berhasil Dihapus!";
+            }
+            $artikel->save();
+        }catch(Exception $e){
+            $err_code = 0;
+            $error = "Warning!";
+            $message = ", Artikel gagal diedit!";
+        }
         return response()->json(['error_code' => $err_code, 'error' => $error, 'message' => $message]);
     }
 

@@ -37,7 +37,17 @@ active
                 <div class="row control-group">
                     <div class="form-group col-xs-12 controls">
                         <label for="inputpicture">Foto Artikel</label>
-                        <input type="file" name="picture" class="" id="inputpicture">
+                        
+                        <table>
+                            <th>
+                                <input type="file" name="picture" class="" id="inputpicture"></th>
+                            <th>
+                                <button id="btn-delete-foto" class="btn btn-warning" style="display: none;">Delete Foto</button>
+                                <button id="btn-kembalikan-foto" class="btn btn-warning" style="display: none;">
+                                    Kembalikan Foto
+                                </button>
+                            </th>
+                        </table>
                     </div>
                 </div>
                 <div class="row control-group">
