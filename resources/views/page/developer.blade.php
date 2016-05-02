@@ -40,9 +40,9 @@
             <img class="team-image" src="img/team/monik.png">
             <p>Monika Suryadarma</p>
             <p class="jobdesk">Programmer</p>
-            <a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-2x"></i></a>
-            <a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
-            <a href="https://www.twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
+            <a href="https://www.facebook.com/eunikemonika"><i class="fa fa-facebook-square fa-2x"></i></a>
+            <a href="https://www.instagram.com/eunikemonika"><i class="fa fa-instagram fa-2x"></i></a>
+            <a href="https://www.twitter.com/eunikemonika"><i class="fa fa-twitter fa-2x"></i></a>
           </div>
 
           <div class="col-sm-4 div-team">
