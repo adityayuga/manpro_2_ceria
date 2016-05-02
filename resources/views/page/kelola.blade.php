@@ -1,28 +1,4 @@
 @extends('layout.layout')
-<<<<<<< HEAD
-
-=======
-@section('header_home')
-    <header class="intro-header" style="background-image: url('img/home-bg.png')">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                        <img class="img-responsive" src="img/logoukdw.png">
-                        <h1>PUSAT PENGEMBANGAN PRIBADI</h1>
-                        <p class="italic">People's development center</p>
-                        <hr class="small">
-                        <span class="subheading">Universitas Kristen Duta Wacana</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="moto">
-                <p class="moto">- Anda dilayani supaya anda dapat melayani. -</p>
-        </div>
-    </header>
-@stop
->>>>>>> 22b5a7a641b15d6fed070e58142cd5059104f565
 
 @section('selected-kelola')
 active
