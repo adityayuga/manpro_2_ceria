@@ -7,6 +7,11 @@ body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 20px;
   color: #404040;
+  height: 100%
+  position: relative;
+}
+body, html{
+    min-height: 100%;
 }
 p {
   line-height: 1.5;
@@ -270,12 +275,19 @@ hr.small {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
+footer *{
+    text-align:left;
+}
 footer {
+  /*position: absolute;*/
+  width: 100%;
+  bottom: 0;
   margin-top: 100px;
-  padding: 10px;
+  padding: 20px;
   color:white;
   background-color: #2F2E2E;
 }
+
 footer .list-inline {
   margin: 0;
   padding: 0;

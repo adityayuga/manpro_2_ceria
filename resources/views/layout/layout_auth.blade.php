@@ -9,13 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog</title>
+    <title>Pusat Pengembangan Pribadi UKDW</title>
+    <link rel="icon" type="image/png" href="http://i1043.photobucket.com/albums/b433/patrick_ricoo/logoukdw_zps8ora7xlt.png" />
         
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+   <!-- Bootstrap Core CSS -->
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
-   
+    <link href="{{ asset('css/clean-blog.css') }}" rel="stylesheet" type="text/css">
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
