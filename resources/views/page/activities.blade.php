@@ -7,11 +7,15 @@
                     <div class="site-heading">
                         <img class="img-responsive" src="img/logoukdw.png">
                         <h1>PUSAT PENGEMBANGAN PRIBADI</h1>
+                        <p class="italic">People's development center</p>
                         <hr class="small">
                         <span class="subheading">Universitas Kristen Duta Wacana</span>
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="moto">
+                <p class="moto">- Anda dilayani supaya anda dapat melayani. -</p>
         </div>
     </header>
 @stop
@@ -34,12 +38,12 @@ active
                     <a  href="{{ URL::to('activity/' . $a_artikel->slug) }}" value="<?=$a_artikel->slug?>">
                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
+                            <td width="30%" align="left">
                             <?PHP if(!$a_artikel->path == "")
                             {?>
-                            <td width="30%" align="left">
                                 <img class="img-responsive container" src="<?=$a_artikel->path?>" alt="<?=$a_artikel->path?>" width="300" />
+                            <?PHP } ?>
                             </td>
-                            <?PHP }?>
                             <td align="left">
                                 <h2 class="post-title responsivetexth2">
                             {!!str_limit($a_artikel->judul, 30,"...")!!}
