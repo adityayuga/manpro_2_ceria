@@ -39,17 +39,10 @@
           <div class="col-sm-4 div-team">
             <img class="team-image" src="img/team/monik.png">
             <p>Monika Suryadarma</p>
-<<<<<<< HEAD
-            <p class="jobdesk">Programmer</p>
+            <p class="jobdesk">Back End Developer</p>
             <a href="https://www.facebook.com/eunikemonika"><i class="fa fa-facebook-square fa-2x"></i></a>
             <a href="https://www.instagram.com/eunikemonika"><i class="fa fa-instagram fa-2x"></i></a>
             <a href="https://www.twitter.com/eunikemonika"><i class="fa fa-twitter fa-2x"></i></a>
-=======
-            <p class="jobdesk">Back End Developer</p>
-            <a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-2x"></i></a>
-            <a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
-            <a href="https://www.twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
->>>>>>> 3fed94ab9c02dc474e5030467d2fdef60a1e1cba
           </div>
 
           <div class="col-sm-4 div-team">
