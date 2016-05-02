@@ -34,13 +34,23 @@
                     <img id="fotoxx" width="230" src="../{{ $a_artikel->path }}">
 							<?PHP } else { ?>
                     <img id="fotoxx" width="230" >
-
-							<?PHP } ?>
+				<?PHP } ?>
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 controls">
                         <label for="inputpicture">Ganti Foto Artikel</label>
-                        <input type="file" name="picture" class="" id="inputpicture" data-buttonText="Your label here.">
+                        <table>
+                            <th>
+                                <input type="file" name="picture" class="" id="inputpicture">
+                                <img src="" id="fotoBackup" style="display: none;">
+                            </th>
+                            <th>
+                                <button id="btn-delete-foto" class="btn btn-warning" style="display: none;">Delete Foto</button>
+                                <button id="btn-kembalikan-foto" class="btn btn-warning" style="display: none;">
+                                    Kembalikan Foto
+                                </button>
+                            </th>
+                        </table>
                     </div>
                 </div>
                 <div class="row control-group">

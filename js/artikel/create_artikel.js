@@ -1,4 +1,28 @@
 $(document).ready(function(){
+
+	var fotoSrc = $('#fotoxx').attr('src');
+	var cekButton = "";
+
+
+	$('#btn-delete-foto').click(function(event){	
+		$('#fotoxx').toggle('hide');
+        $('#btn-delete-foto').toggle('show');
+		$('#btn-kembalikan-foto').toggle('show');
+		$('#fotoxx').attr('src', null);
+
+		cekButton = "kembalikan";
+		$('#inputpicture').val('');
+	});
+
+	$('#btn-kembalikan-foto').click(function(event){	
+		$('#fotoxx').attr('src', fotoSrc);
+		$('#fotoxx').toggle('show');
+        $('#btn-delete-foto').toggle('show');
+		$('#btn-kembalikan-foto').toggle('show');
+
+		cekButton = "delete";
+	});
+
 	$('#judul').get(0).focus();
 
 	$('#isi_artikel').summernote({
@@ -6,8 +30,6 @@ $(document).ready(function(){
 		minHeight: 400,
 		maxHeight: 900
 	});
-
-
 	
 	$("img").addClass("img-responsive");
 
@@ -110,8 +132,17 @@ $(document).ready(function(){
 	        var reader = new FileReader();
 	        reader.onload = function (e) {
 	            $('#fotoxx').attr('src', e.target.result);
+	            fotoSrc = $('#fotoxx').attr('src');
+				if (cekButton == "kembalikan") {
+					$('#fotoxx').toggle('show');
+			        $('#btn-delete-foto').toggle('show');
+					$('#btn-kembalikan-foto').toggle('show');	
+					cekButton = "delete";
+				}
+				else if(cekButton == ""){
+					$('#btn-delete-foto').toggle('show');
+				}
 	        }
-
 	        reader.readAsDataURL(input.files[0]);
 	    }
 	}
