@@ -39,7 +39,7 @@ Route::group(['middleware' => 'web'], function () {
 	    return view('page.services');
 	});
 
-	Route::get('edit/{id}', 'ArtikelController@artikel_to_edit');
+	Route::get('edit/{id}', ['middleware' => 'auth', 'uses' =>'ArtikelController@artikel_to_edit']);
 	Route::get('/activities','ArtikelController@get_artikel_activities');
 
 	Route::get('/selfhelp','ArtikelController@get_artikel_selfhelp');
@@ -74,10 +74,10 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/home', 'HomeController@index');
 
 	//-------Artikel-------//
-	Route::post('/post_artikel', 'ArtikelController@create_post');
-	Route::get('kelola/edit/{id}/edit_artikel', 'ArtikelController@edit_post');
-	Route::post('edit/{id}/update_artikel', 'ArtikelController@update_post');
-	Route::post('/kelola_artikel', 'ArtikelController@kelola_post');
-	Route::post('/delete_artikel', 'ArtikelController@delete_post');
+	Route::post('/post_artikel', ['middleware' => 'auth', 'uses' =>'ArtikelController@create_post']);
+	Route::get('kelola/edit/{id}/edit_artikel', ['middleware' => 'auth', 'uses' =>'ArtikelController@edit_post']);
+	Route::post('edit/{id}/update_artikel', ['middleware' => 'auth', 'uses' => 'ArtikelController@update_post']);
+	Route::post('/kelola_artikel', ['middleware' => 'auth', 'uses' =>'ArtikelController@kelola_post']);
+	Route::post('/delete_artikel', ['middleware' => 'auth', 'uses' =>'ArtikelController@delete_post']);
 
 });
