@@ -11,7 +11,6 @@
                 </button>
                 <a class="navbar-brand" href="{{ url('/') }}">PUSAT PENGEMBANGAN PRIBADI</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -30,12 +29,21 @@
                     <li class="@yield('selected-about')">
                         <a href="{{ url('/about') }}">About Us</a>
                     </li>
+					@if (Auth::check())
                     <li class="@yield('selected-create')">
                         <a href="{{ url('/create') }}">Create Article</a>
                     </li>
                     <li class="@yield('selected-kelola')">
                         <a href="{{ url('/kelola') }}">Kelola Article</a>
                     </li>
+					<li class="@yield('selected-about')">
+                        <a href="{{ url('/logout') }}">Logout</a>
+                    </li>
+					@else
+					<li class="@yield('selected-about')">
+                        <a href="{{ url('/login') }}">Login</a>
+                    </li>
+					@endif
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
