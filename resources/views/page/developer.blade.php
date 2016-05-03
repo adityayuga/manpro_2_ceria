@@ -23,7 +23,7 @@
             <p >Ega Prathama</p>
             <p class="jobdesk">Wakil Project Manager</p>
             <a href="https://www.facebook.com/ega.prathama"><i class="fa fa-facebook-square fa-2x"></i></a>
-            <a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
+            <a href="https://www.instagram.com/egaprthm"><i class="fa fa-instagram fa-2x"></i></a>
             <a href="https://https://twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
           </div>
           
@@ -50,7 +50,7 @@
             <p>Aditya Yuga Pradhana</p>
             <p class="jobdesk">Back End Developer</p>
             <a href="https://www.facebook.com/yugapradhana"><i class="fa fa-facebook-square fa-2x"></i></a>
-            <a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
+            <a href="https://www.instagram.com/adityayugap"><i class="fa fa-instagram fa-2x"></i></a>
             <a href="https://www.twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
           </div>
 
@@ -59,7 +59,7 @@
             <p>Yohanes</p>
             <p class="jobdesk">Back End Developer</p>
             <a href="https://www.facebook.com/yohanezdoank"><i class="fa fa-facebook-square fa-2x"></i></a>
-            <a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
+            <a href="https://www.instagram.com/yohanes.doank"><i class="fa fa-instagram fa-2x"></i></a>
             <a href="https://www.twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
           </div>
 
@@ -68,7 +68,7 @@
             <p>Agustianto Purnomo</p>
             <p class="jobdesk">Front End Developer</p>
             <a href="https://www.facebook.com/agustianto.purnomo"><i class="fa fa-facebook-square fa-2x"></i></a>
-            <a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
+            <a href="https://www.instagram.com/zhehua11"><i class="fa fa-instagram fa-2x"></i></a>
             <a href="https://www.twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
           </div>
 
@@ -86,7 +86,7 @@
             <p>Yohanes Ryan Saputra</p>
             <p class="jobdesk">Humas</p>
             <a href="https://www.facebook.com/yohanes.ryan.10"><i class="fa fa-facebook-square fa-2x"></i></a>
-            <a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
+            <a href="https://www.instagram.com/yohanes.ryan"><i class="fa fa-instagram fa-2x"></i></a>
             <a href="https://www.twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
           </div>
 
@@ -113,7 +113,7 @@
             <p>Mikhael Meier</p>
             <p class="jobdesk">Tester</p>
             <a href="https://www.facebook.com/mikhaelmeier"><i class="fa fa-facebook-square fa-2x"></i></a>
-            <a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
+            <a href="https://www.instagram.com/mikhaelmeier"><i class="fa fa-instagram fa-2x"></i></a>
             <a href="https://www.twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
 
           </div>
