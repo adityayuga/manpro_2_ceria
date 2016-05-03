@@ -62,9 +62,10 @@ active
                      <?php } ?>
                 </div>
                 <hr>
- @endforeach
- 
-                {!! $artikel->render() !!}
+                 @endforeach
+                <div class="text-center">
+                    {!! $artikel->render() !!}
+                </div>
                 </div>
             </div>
         </div>

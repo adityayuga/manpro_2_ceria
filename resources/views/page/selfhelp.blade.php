@@ -65,7 +65,9 @@ active
                 <hr>
                     @endforeach
 
-                {!! $artikel->render() !!}
+                <div class="text-center">
+                    {!! $artikel->render() !!}
+                </div>
                 <!-- Pager -->
                 <!--<ul class="pager">
                     <li class="next">
