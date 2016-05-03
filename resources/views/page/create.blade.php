@@ -32,7 +32,7 @@ active
                 <br>
                 <div class="row control-group">
                     <!-- displaying foto disini -->
-                    <img id="fotoxx" class="img-responsive" max-width="500px" max-height="250px";>
+                    <img id="fotoxx" class="img-responsive" width="300px;" max-width="500px" max-height="250px";>
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 controls">
