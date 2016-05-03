@@ -47,12 +47,12 @@ Route::group(['middleware' => 'web'], function () {
 
 	Route::get('{artikel}/{slug}', 'ArtikelController@detail_artikel');
 
-	Route::get('/create', function() {
+	Route::get('/create',  ['middleware' => 'auth', function() {
 		return view('page.create');
-	});
-	Route::get('/kelola', function() {
+	}]);
+	Route::get('/kelola',  ['middleware' => 'auth', function() {
 		return view('page.kelola');
-	});
+	}]);
 	Route::get('/developers', function() {
 		return view('page.developer');
 	});
