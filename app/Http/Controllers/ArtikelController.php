@@ -180,7 +180,7 @@ class ArtikelController extends Controller
                 File::delete($artikel->path);
                 $artikel->path = $this->saveImage($request->image);
             }
-            else{   
+            else if($request->foto == ""){   
                 File::delete($artikel->path);
                 $artikel->path = "";
             }

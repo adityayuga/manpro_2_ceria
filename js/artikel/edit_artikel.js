@@ -3,16 +3,16 @@ $(document).ready(function(){
 
 	var id = window.location.href.slice(window.location.href.indexOf('dit/') + 4);
 	var fotoSrc = $('#fotoxx').attr('src');
+	var fotoSrcTemp = $('#fotoxx').attr('src');
 	var cekButton = "";
 	var imgSudahBerganti = "";
-	var x ;
+
 
 	$('#isi_artikel').summernote({
 		height: 300,
 		minHeight: 400,
 		maxHeight: 400
 	});
-
 
 	$("img").addClass("img-responsive");
 
@@ -26,21 +26,22 @@ $(document).ready(function(){
 
 	$('#btn-delete-foto').click(function(event){	
 		//$('#fotoBackup').attr('src', $('#fotoxx').attr('src'));
-		x = $('#inputpicture').val();
+		//x = $('#inputpicture').val();
 		$('#fotoxx').toggle('hide');
         $('#btn-delete-foto').toggle('show');
 		$('#btn-kembalikan-foto').toggle('show');
 		$('#fotoxx').attr('src', null);
-		$('#inputpicture').val('');
+		
 		cekButton = "kembalikan";
+		fotoSrc = "";
 	});
 
 	$('#btn-kembalikan-foto').click(function(event){
-		$('#fotoxx').attr('src', fotoSrc);
+		$('#fotoxx').attr('src', fotoSrcTemp);
 		$('#fotoxx').toggle('show');
         $('#btn-delete-foto').toggle('show');
 		$('#btn-kembalikan-foto').toggle('show');
-
+		fotoSrc = 
 		cekButton = "delete";
 	});
 
@@ -51,6 +52,10 @@ $(document).ready(function(){
 		var judulArtikel = $('#judul').val();
 		var deskripsiArtikel  = $('#deskripsi').val();
 		var kategori = $('input[name="etype"]:checked').val();
+
+		if (cekButton == "kembalikan") {
+			$('#inputpicture').val('');
+		}
 
 		if($('#inputpicture').val() == ""){
 			requestUploadArtikel(judulArtikel, isiArtikel, kategori, deskripsiArtikel, null);
@@ -82,7 +87,8 @@ $(document).ready(function(){
 				'isi' 		: isi,
 				'kategori' 	: kategori,
 				'deskripsi' : deskripsi,
-				'image'		: imageData
+				'image'		: imageData,
+				'foto' : fotoSrc
 			},
 			dataType: "json",
 			url: window.location + "/update_artikel",
@@ -120,7 +126,9 @@ $(document).ready(function(){
 	        imgSudahBerganti = "OK";
 	        reader.onload = function (e) {
 	            $('#fotoxx').attr('src', e.target.result);
+				
 	            fotoSrc = $('#fotoxx').attr('src');
+	            fotoSrcTemp = $('#fotoxx').attr('src');
 				if (cekButton == "kembalikan") {
 					$('#fotoxx').toggle('show');
 			        $('#btn-delete-foto').toggle('show');
