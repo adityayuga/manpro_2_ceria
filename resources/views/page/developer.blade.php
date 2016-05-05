@@ -75,7 +75,7 @@
           <div class="col-sm-4 div-team">
             <img class="team-image" src="img/team/rico.png">
             <p>Rico Manurung</p>
-            <p class="jobdesk">Desainer</p>
+            <p class="jobdesk">Front End Developer</p>
             <a href="https://www.facebook.com/patrickricomanurung"><i class="fa fa-facebook-square fa-2x"></i></a>
             <a href="https://www.instagram.com/patrick_ricoo/"><i class="fa fa-instagram fa-2x"></i></a>
             <a href="https://twitter.com/patrick_ricoo"><i class="fa fa-twitter fa-2x"></i></a>
