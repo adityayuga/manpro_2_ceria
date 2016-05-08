@@ -17,9 +17,41 @@ html{
 
   height: 100%;
 }
-
 body, html{
     min-height: 100%;
+}
+hr.star-light,
+hr.star-primary {
+    margin: 0px auto 30px;
+    padding: 0;
+    max-width: 400px;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;
+}
+hr.star-light:after,
+hr.star-primary:after {
+    content: "\f005";
+    display: inline-block;
+    position: relative;
+    top: -.8em;
+    padding: 0 .25em;
+    font-family: FontAwesome;
+    font-size: 2em;
+}
+hr.star-light {
+    border-color: #ADC743;
+}
+hr.star-light:after {
+    color: #000;
+    background-color: #ADC743;
+}
+hr.star-primary {
+    border-color: #ADC743;
+}
+hr.star-primary:after {
+    color: #2c3e50;
+    background-color: #fff;
 }
 p {
   line-height: 1.5;

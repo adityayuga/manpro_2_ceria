@@ -20,7 +20,8 @@ active
             echo "<br>";
         }
      ?>
-    <h3>Tabel Artikel</h3>
+    <h1 class="text-center post-title">Tabel Artikel</h1><br>
+    <hr class="star-light"><br>
     <div >
             <div class="form-group has-feedback">
                 <label for="search" class="sr-only">Search</label>

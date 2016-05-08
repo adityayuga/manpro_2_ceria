@@ -8,7 +8,8 @@
 @section('content')
 <div class="container-fluid text-center">    
   <div class="row" style="margin-top:10%;">  
-          <b><h1>Our Team</h1></b><br>
+          <b><h1>Developer's Team</h1></b><br>
+          <hr class="star-light">
           <div class="col-sm-4 div-team">
             <img class="team-image" src="img/team/dodo.png"> 
             <p>Daniel Reinaldo</p>

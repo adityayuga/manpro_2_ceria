@@ -33,7 +33,8 @@ active
     <div class="container">
         <div class="row">
              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <h1 class="post-title">Artikel Self Help</h2><hr>
+                    <h1 class="post-title text-center">Artikel Self Help</h2><br>
+                    <hr class="star-light">
                     @foreach ($artikel as $a_artikel)
                 <div class="post-preview">
                     <a href="{{ URL::to('selfhelp/' . $a_artikel->slug) }}" value="<?=$a_artikel->slug?>">
