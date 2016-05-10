@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <img class="img-responsive" src="img/logoukdw.png">
+                        <img class="img-responsive-header" src="img/logoukdw.png">
                         <h1>PUSAT PENGEMBANGAN PRIBADI</h1>
                         <p class="italic">People's development center</p>
                         <hr class="small">
@@ -52,7 +52,7 @@ active
                 		<td>Jadwal Konselor</td>
                 	</tr>
                 	<tr>
-                		<td>Nevi Kurnia Arianti, M.si, P.si.*</td>
+                		<td>Nevi Kurnia Arianti, M.Si.,Psi.*</td>
                 		<td>Selasa, pk 10.00-12.00</td>
                 	</tr>
                 	<tr>

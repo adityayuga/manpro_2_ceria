@@ -4,7 +4,7 @@
  * Licensed under Apache 2.0 (https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE)
  */
 body {
-  font-family: 'Calibi', 'Times New Roman', serif;
+  font-family: 'Calibri', 'Times New Roman', serif;
   font-size: 20px;
   color: #404040;
   height: 100%
@@ -506,10 +506,9 @@ p.italic{
 .moto{
   font-style: italic;
   right: 0px;
-}
-#moto{
   padding-right: 20px;
   padding-bottom: 20px;
+  /*margin-bottom: 10%;*/
   margin-right: 10px;
   text-align: right;
   color: white;
