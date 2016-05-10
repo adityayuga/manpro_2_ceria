@@ -41,7 +41,7 @@
                    <p class="post-meta-detail"><b>Posted on</b> {{$a_artikel->created_at}}</p></td>
                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td style="padding : 0px 2px 15px 3px;  ">
-                    <div class="fb-share-button" data-href="#" data-layout="button" data-mobile-iframe="true"></div>
+                    <div class="fb-share-button" data-href="#" data-layout="button" data-mobile-iframe="false"></div>
                    </td>
                     <td style="padding : 0px 2px 0px 3px;  ">
                      <?PHP
@@ -51,7 +51,7 @@
                     $midurl = "activity";
                    }
                    ?>
-                   <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{asset($midurl. "/". $a_artikel->slug)}}" data-text="{{$a_artikel->judul}}" data-hashtags="PPPUKDW">Tweet</a>
+                   <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{asset($midurl. "/". $a_artikel->slug)}}" data-text="{{$a_artikel->judul}}" data-hashtags="PPPUKDW"></a>
                    </td>
                    </tr>
                    </table>
