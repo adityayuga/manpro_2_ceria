@@ -81,7 +81,7 @@ class ArtikelController extends Controller
             $artikel = new Artikel;
             $artikel->judul = $request->judul;
             $artikel->content = $this->generateImage($request->isi);
-            $artikel->slug = str_replace(" ", '-', strtolower($request->judul));
+            $artikel->slug = str_slug($request->judul, "-");
             $artikel->kategori = $request->kategori;
             $artikel->deskripsi = $request->deskripsi;
             
@@ -185,7 +185,7 @@ class ArtikelController extends Controller
                 $artikel->path = "";
             }
             $artikel->content = $this->generateImage($request->isi);
-            $artikel->slug = str_replace(" ", '-', strtolower($request->judul));
+            $artikel->slug = str_slug($request->judul, "-");
             $artikel->kategori = $request->kategori;
             $artikel->updated_at = $request->updated_at;
             $artikel->save();
