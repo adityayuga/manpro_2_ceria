@@ -2,7 +2,7 @@
 
 @section('link/script')
   <link href="{{ asset('public/css/developers/developers.css') }}" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 @endsection
 
 @section('content')
